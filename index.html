@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"  media="screen,projection"/>
+  <title>Tanishq Aggarwal</title>
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <style>
+    header, main, footer {
+      padding-left: 300px;
+    }
+    
+    @media only screen and (max-width : 992px) {
+      header, main, footer {
+        padding-left: 0;
+      }
+    }
+  </style>
+</head>
+
+<body class = "grey lighten-3">
+  <header>
+    <ul class="side-nav fixed">
+      <li class = "center">
+        <div class="user-view center">
+          <a href="#!user" class = "center"><span class = "center" ><img class="circle center" src="images/tanishq.png"></span></a>
+          <a href="#!name"><span class="black-text name center-align large">Tanishq Aggarwal</span></a>
+          <span class="black-text email center-align">
+            <a class = "material-icons black-text" href = "mailto:ta335@cornell.edu">email</a> &nbsp;
+            <a href = "http://github.com/tanishqaggarwal" target = "_blank" class = "material-icons black-text">code</a>
+          </span>
+        </div>
+      </li>
+      <li class = "menu-li active"><a class = "waves-effect menu-link" data-toggle = "about-me" href="#about-me">About Me</a></li>
+      <li class = "menu-li"><a class="waves-effect menu-link" data-toggle="experiences" href="#experiences">Experiences</a></li>
+      <li class = "menu-li"><a class="waves-effect menu-link" data-toggle="education" href="#education">Education</a></li>
+    </ul>
+    <a href="#" data-activates="slide-out" class="button-collapse right-align black-text hide-on-large-only"><i class="material-icons">menu</i></a>
+  </header> 
+  <main>
+    <div class = 'section'>
+      <div class = "row">
+        <div class = "col s10 offset-s1">
+          <div id = "about-me" class = "content">
+            <h1>Hi there!</h1>
+            <p class = "flow-text">My name is Tanishq and I like to learn cool things and make stuff.</p>
+            <p class = "flow-text">Currently I am majoring in physics and minoring in CS at Cornell University's College of Engineering. My specialty and my primary interest is in (robotics) control systems design and implementation. However, my interests, experiences and talents span a broad range, both within engineering and beyond. </p>
+            <p class = "flow-text">I am currently on the job market and am seeking impactful, exciting, and intellectually enriching opportunities. If you are a hiring manager, <a href = "resume.pdf" class = "black-text"><u>my resume</u></a> may interest you.</p>
+          </div>
+          <div id = "experiences" class = "content hide">
+            <h1>Experiences</h1>
+            <p class = "flow-text">Between high school and college, I've had the privilege of a diverse set of experiences across STEM. These are a few highlights of my career thus far.</p>
+            
+            <div class = "row">
+              <div class = "col s7">
+                <div class = "row">
+                  <div class="card modal-trigger" href = "#pathfinding-modal">
+                    <div class="card-image">
+                      <img src="/images/ssds/pan_intro.png">
+                    </div>
+                    <div class="card-content">
+                      <span class="card-title">Pathfinding Autonomous Navigation</span>
+                    </div>
+                  </div>
+                  <div class="card modal-trigger" href = "#carbon-modal">
+                    <div class="card-image">
+                      <img src="/images/carbon.png">
+                    </div>
+                    <div class="card-content">
+                      <span class="card-title">Carbon-12 Labs</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class = "col s5">
+                <div class = "row">
+                  <div class="card modal-trigger" href = "#rover-modal">
+                    <div class="card-image">
+                      <img src="/images/ssds/mars_rover_intro.png">
+                    </div>
+                    <div class="card-content">
+                      <span class="card-title">Control Moment Gyroscope Polyhedral Rover</span>
+                    </div>
+                  </div>
+                  <div class="card modal-trigger" href = "#pppl-modal">
+                    <div class="card-image">
+                      <img src="/images/pppl.jpg">
+                    </div>
+                    <div class="card-content">
+                      <span class="card-title">Princeton Plasma Physics Laboratory</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s5">
+                <div class="row">
+                  <div class="card modal-trigger" href = "#gset-modal">
+                    <div class="card-image">
+                      <img src="/images/gset/gset_intro.jpg">
+                    </div>
+                    <div class="card-content">
+                      <span class="card-title">Governor's School of Engineering and Technology</span>
+                    </div>
+                  </div>
+                  <div class="card modal-trigger" href = "#hackathons-modal">
+                    <div class="card-image">
+                      <img src="/images/hackathons.png">
+                    </div>
+                    <div class="card-content">
+                      <span class="card-title">Hackathons</span>
+                    </div>
+                  </div>
+                  <div class="card modal-trigger" href = "#wwpmt-modal">
+                    <div class="card-image">
+                      <img src="/images/wwpmt.png">
+                    </div>
+                    <div class="card-content">
+                      <span class="card-title">West Windsor-Plainsboro Mathematics Tournament</span>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+              <div class="col s7">
+                <div class="card modal-trigger" href = "#ssc-modal">
+                  <div class="card-image">
+                    <img src="/images/sciclub/science_bowl.jpg">
+                  </div>
+                  <div class="card-content">
+                    <span class="card-title">South Science Club</span>
+                  </div>
+                </div>
+                <div class="card modal-trigger" href = "#ctf-modal">
+                  <div class="card-image">
+                    <img src="/images/ctfs.png">
+                  </div>
+                  <div class="card-content">
+                    <span class="card-title">Capture the Flag Tournaments</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          <div id = "education" class = "content hide">
+            <h1>Education</h1>
+            <div class="divider"></div>
+            <div class="section">
+              <h5>Cornell University</h5>
+              <p><i>August 2017 - (exp.) May 2021</i></p>
+              <div class = "row">
+                <div class = "col s12">
+                  <p>Majoring in Applied and Engineering Physics (AEP) with a minor in computer science, under the university's College of Engineering. </p>
+                  <p><b>Courses:</b> Digital Logic and Computer Organization &middot; Embedded Systems &middot; Honors Physics (Waves/QM/Thermodynamics/Statistical Mechanics, Electricity and Magnetism) &middot; Data Structures and Algorithms &middot; Discrete Mathematics &middot; Nanoscience and Nanoengineering</p>
+                </div>
+              </div>
+            </div>
+            <div class="divider"></div>
+            <div class="section">
+              <h5>Princeton University</h5>
+              <p><i>September 2016 - January 2017</i></p>
+              <div class = "row">
+                <div class = "col s12">
+                  As a high school student, I was eligible to take mathematics courses at the university after exhausting all available options at my high school. I chose to take MAT215: Analysis in a Single Variable.
+                </div>
+              </div>
+            </div>
+            <div class="divider"></div>
+            <div class="section">
+              <h5>West Windsor-Plainsboro High School South</h5>
+              <p><i>September 2013 - May 2017</i></p>
+              <div class = "row">
+                <div class = "col s12">
+                  Graduated with distinction (top 5% of class).
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id = "honors" class = "content hide">
+            <h1>Honors and Awards</h1>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="pathfinding-modal" class="modal">
+      <div class="modal-content">
+        <h4>Pathfinding Autonomous Navigation (PAN)</h4>
+        <p>A project under the <a href = "http://spacecraftresearch.squarespace.com">Space Systems Design Studio</a> headed by Dr. Mason Peck, PAN will launch two CubeSats into space on differing orbits  and attempt to have them autonomously dock with one another. This project is the first known project to be attempting fully autonomous spacecraft rendezvous and docking manuevers in space. Find out more about the project <a href = 'http://spacecraftresearch.squarespace.com/pan'>here</a>.</p>
+        <p>My job on this team is to engineer the control systems software and hardware that will be responsible for coordinating these manuevers. Using C++, I will be interfacing a Teensy 3.5, our central microcontroller, with the various system peripherals and sensors that will be installed on the spacecraft in order to determine the spacecraft's state. </p>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+      </div>
+    </div>
+    <div id="rover-modal" class="modal">
+      <div class="modal-content">
+        <h4>Control Moment Gyroscope Polyhedral Rover</h4>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+      </div>
+    </div>
+    <div id="pppl-modal" class="modal">
+      <div class="modal-content">
+        <h4>Princeton Plasma Physics Laboratory</h4>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+      </div>
+    </div>
+    <div id="carbon-modal" class="modal">
+      <div class="modal-content">
+        <h4>Carbon-12 Labs</h4>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+      </div>
+    </div>
+    <div id="gset-modal" class="modal">
+      <div class="modal-content">
+        <h4>Governor's School of Engineering and Technology</h4>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+      </div>
+    </div>
+    <div id="ssc-modal" class="modal">
+      <div class="modal-content">
+        <h4>South Science Club</h4>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+      </div>
+    </div>
+    <div id="wwpmt-modal" class="modal">
+      <div class="modal-content">
+        <h4>West Windsor-Plainsboro Mathematics Tournament</h4>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+      </div>
+    </div>
+    <div id="hackathons-modal" class="modal">
+      <div class="modal-content">
+        <h4>Hackathon Projects</h4>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+      </div>
+    </div>
+    <div id="ctf-modal" class="modal">
+      <div class="modal-content">
+        <h4>Capture the Flag Tournaments (CTFs)</h4>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+      </div>
+    </div>
+  </main>
+  
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script>
+    $(document).ready(function () {
+        $('.modal').modal();
+      });
+
+    $(".button-collapse").sideNav();
+    $('.carousel.carousel-slider').carousel({fullWidth:true, indicators:true});
+    
+    $(".menu-link").click(function() {
+      // Menu
+      $(".menu-li").removeClass("active");
+      $(this).parent().addClass("active");
+      
+      // Content
+      $(".content").addClass("hide");
+      $(".content").removeClass("show");
+      $("#" + $(this).data("toggle")).removeClass("hide");
+      $("#" + $(this).data("toggle")).addClass("show");
+    });
+  </script>
+</body>
+</html>
