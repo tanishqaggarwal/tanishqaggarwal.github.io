@@ -24,14 +24,26 @@
 <body class = "grey lighten-3">
   <header>
     <ul class="side-nav fixed">
-      <li class = "center">
-        <div class="user-view center">
-          <a href="#!user" class = "center"><span class = "center" ><img class="circle center" src="images/tanishq.png"></span></a>
-          <a href="#!name"><span class="black-text name center-align large">Tanishq Aggarwal</span></a>
-          <span class="black-text email center-align">
-            <a class = "material-icons black-text" href = "mailto:ta335@cornell.edu">email</a> &nbsp;
-            <a href = "http://github.com/tanishqaggarwal" target = "_blank" class = "material-icons black-text">code</a>
-          </span>
+      <li class = "logo">
+        <div class="user-view">
+          <div class = "row">
+            <div class = "col s4 offset-s4">
+              <span>
+                <img class="circle" src="images/tanishq.png">
+              </span>
+            </div>
+          </div>
+          <div class = "row">
+            <div class = "col s12">
+              <a href="#!name">
+                <span class="black-text name center-align large">Tanishq Aggarwal</span>
+              </a>
+              <span class="black-text email center-align">
+                <a class="material-icons black-text" href="mailto:ta335@cornell.edu">email</a> &nbsp;
+                <a href="http://github.com/tanishqaggarwal" target="_blank" class="material-icons black-text">code</a>
+              </span>
+            </div>
+          </div>
         </div>
       </li>
       <li class = "menu-li active"><a class = "waves-effect menu-link" data-toggle = "about-me" href="#about-me">About Me</a></li>
@@ -46,14 +58,14 @@
         <div class = "col s10 offset-s1">
           <div id = "about-me" class = "content">
             <h1>Hi there!</h1>
-            <p class = "flow-text">My name is Tanishq and I like to learn cool things and make stuff.</p>
-            <p class = "flow-text">Currently I am majoring in physics and minoring in CS at Cornell University's College of Engineering. My specialty and my primary interest is in (robotics) control systems design and implementation. However, my interests, experiences and talents span a broad range, both within engineering and beyond. </p>
-            <p class = "flow-text">I am currently on the job market and am seeking impactful, exciting, and intellectually enriching opportunities. If you are a hiring manager, <a href = "resume.pdf" class = "black-text"><u>my resume</u></a> may interest you.</p>
+            <p class = "flow-text">My name is Tanishq and I like to learn things and make stuff.</p>
+            <p class = "flow-text">Currently I'm majoring in physics and minoring in CS at Cornell University's College of Engineering. My specialty and my primary interest is in (robotics) control systems design and implementation. However, my interests, experiences and talents span a broad range, both within engineering and beyond. </p>
+            <p class = "flow-text">I'm currently on the job market and am seeking impactful, exciting, and intellectually enriching opportunities. If you're a hiring manager, <a href = "resume.pdf" class = "black-text"><u>my resume</u></a> may interest you.</p>
           </div>
           <div id = "experiences" class = "content hide">
             <h1>Experiences</h1>
             <p class = "flow-text">Between high school and college, I've had the privilege of a diverse set of experiences across STEM. These are a few highlights of my career thus far.</p>
-            
+            <p>Click on the tiles to find out more about each experience.</p>
             <div class = "row">
               <div class = "col s7">
                 <div class = "row">
@@ -192,7 +204,7 @@
     <div id="pathfinding-modal" class="modal">
       <div class="modal-content">
         <h4>Pathfinding Autonomous Navigation (PAN)</h4>
-        <p>A project under the <a href = "http://spacecraftresearch.squarespace.com">Space Systems Design Studio</a> headed by Dr. Mason Peck, PAN will launch two CubeSats into space on differing orbits  and attempt to have them autonomously dock with one another. This project is the first known project to be attempting fully autonomous spacecraft rendezvous and docking manuevers in space. Find out more about the project <a href = 'http://spacecraftresearch.squarespace.com/pan'>here</a>.</p>
+        <p>A project under the <a href = "http://spacecraftresearch.squarespace.com" target="_blank">Space Systems Design Studio</a> headed by Dr. Mason Peck, PAN will launch two CubeSats into space on differing orbits  and attempt to have them autonomously dock with one another. This project is the first known project to be attempting fully autonomous spacecraft rendezvous and docking manuevers in space. Find out more about the project <a href = 'http://spacecraftresearch.squarespace.com/pan' target="_blank">here</a>.</p>
         <p>My job on this team is to engineer the control systems software and hardware that will be responsible for coordinating these manuevers. Using C++, I will be interfacing a Teensy 3.5, our central microcontroller, with the various system peripherals and sensors that will be installed on the spacecraft in order to determine the spacecraft's state. </p>
       </div>
       <div class="modal-footer">
@@ -202,6 +214,10 @@
     <div id="rover-modal" class="modal">
       <div class="modal-content">
         <h4>Control Moment Gyroscope Polyhedral Rover</h4>
+        <p>This was a former project under the
+          <a href="http://spacecraftresearch.squarespace.com" target="_blank">Space Systems Design Studio</a> headed by Dr. Mason Peck. Using the unique properties of control moment gyroscopes (CMGs), the goal of this project was to design and demonstrate the feasibility of a CMG-based rover.</p>
+        <p>I was scheduled to be the team lead of this project in Fall 2018. Unfortunately, due to funding and other constraints, this project was cancelled. While the team was still in existence, I was in charge of the electrical systems and software architecture, and was also responsible for coordinating design and development between the electrical and mechanical subteams.</p>
+        <p>Snapshots of my work coming soon.</p>
       </div>
       <div class="modal-footer">
         <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
@@ -210,6 +226,7 @@
     <div id="pppl-modal" class="modal">
       <div class="modal-content">
         <h4>Princeton Plasma Physics Laboratory</h4>
+        <p>As part of a high school internship program, I interned at the lab during Spring 2017. I worked in the Science Education and Public Outreach department of the lab, where my work focused on making nuclear fusion accessible to the public. This included making computational simulations of nuclear physics concepts using Javascript (in particular, using the PIXI.JS framework.)</p>
       </div>
       <div class="modal-footer">
         <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
@@ -218,6 +235,7 @@
     <div id="carbon-modal" class="modal">
       <div class="modal-content">
         <h4>Carbon-12 Labs</h4>
+        <p><a href="http://carbon.money" target="_blank">Carbon</a> is committed to developing a price-stable, trustless, fully programmable cryptocurrency. My work at Carbon focuses on developing the <a href = "https://en.wikipedia.org/wiki/Smart_contract" target="_blank">smart contracts</a> that define the Carbon token, as well as engineering the backend systems that will power the adoption of Carbon.</p>
       </div>
       <div class="modal-footer">
         <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
@@ -226,6 +244,8 @@
     <div id="gset-modal" class="modal">
       <div class="modal-content">
         <h4>Governor's School of Engineering and Technology</h4>
+        <p>At this research program I attended in Summer 2016, I engaged in a unique educational program where the curriculum I chose spanned SOLIDWORKS training, spacecraft design, and a robotics research project.</p>
+        <p>The research project was by far the most time-consuming, and also the most fun, aspect of the program. My team's goal was to create a versatile all-terrain rover by modifying a 4-wheeled rover design to include 6 linear actuators on each wheel. You can read more about my team's work <a href = "http://soe.rutgers.edu/sites/default/files/imce/pdfs/gset-2016/untitled-8%20%281%29.pdf" target="_blank">here</a>.</p>
       </div>
       <div class="modal-footer">
         <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
@@ -234,6 +254,8 @@
     <div id="ssc-modal" class="modal">
       <div class="modal-content">
         <h4>South Science Club</h4>
+        <p>As co-president of my high school's science club, I captained our team to a 10th place finish at the 2017 National Science Bowl in Washington, D.C., and co-captained our team to qualify for the National Science Olympiad. I was also a team member of our National Ocean Sciences Bowl team, which also finished in 10th place nationally.</p>
+        <p>In addition, I competed in individual science competitions as well, becoming a semifinalist in the USA Biology Olympiad and the USA Astronomy and Astrophysics Olympiad.</p>
       </div>
       <div class="modal-footer">
         <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
@@ -242,6 +264,8 @@
     <div id="wwpmt-modal" class="modal">
       <div class="modal-content">
         <h4>West Windsor-Plainsboro Mathematics Tournament</h4>
+        <p>I helped found this math tournament for 3rd-8th graders that attracts nearly 500 students annually from the surrounding tri-state area. From 2013-2017, I played a key role in planning and organizing this event. I was also responsible for developing its <a href = "https://wwpmt.org">website</a>.</p>
+        <p>As elected secretary of my high school's math club, I was also responsible for coordinating communications between the administration, the club advisor, and our club.</p>
       </div>
       <div class="modal-footer">
         <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
@@ -250,6 +274,8 @@
     <div id="hackathons-modal" class="modal">
       <div class="modal-content">
         <h4>Hackathon Projects</h4>
+        <p>In high school and college I competed in several hackthons, such as PennApps, HackRPI, HackRU, and BigRedHacks. Through hackathons I developed experience in areas such as electrical engineering, computer vision, and mobile app development.</p>
+        <p>During PennApps 2016, my partner Kevin Li and I developed an app called EarLens, a hearing assistance app, that was recognized as a semifinalist (top 15) at the competition. This was among nearly 2000 participants, of mostly college age, while I was a high school junior.</p>
       </div>
       <div class="modal-footer">
         <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
@@ -258,6 +284,8 @@
     <div id="ctf-modal" class="modal">
       <div class="modal-content">
         <h4>Capture the Flag Tournaments (CTFs)</h4>
+        <p>From 2014-2016, I was the captain of my high school's CTF competition team, Algorithmic Armadillos. CTFs are information security/hacking competitions where the objective is to obtain a string, called a flag, by cracking into cryptographic schemes or programs or websites. The team that collects the most number of strings out of a series of uniquely designed challenges wins the CTF tournament.</p>
+        <p>Our team placed well in several nationwide competitions, such as 3rd place in <a href="http://hsctf.io" target="_blank">HSCTF</a> 2015 and 2nd place in <a href="http://sctf.io">sCTF</a> 2014.</p>
       </div>
       <div class="modal-footer">
         <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
@@ -286,6 +314,7 @@
       $(".content").removeClass("show");
       $("#" + $(this).data("toggle")).removeClass("hide");
       $("#" + $(this).data("toggle")).addClass("show");
+      $(window).scrollTop(0);
     });
   </script>
 </body>
