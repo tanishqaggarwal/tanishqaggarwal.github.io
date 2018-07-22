@@ -38,7 +38,7 @@
             <div class = "col s12">
               <a href="#!name" class="black-text name center-align large">Tanishq Aggarwal</a>
               <span class="black-text email center-align">
-                <a class="material-icons black-text" href="mailto:tanishq@tanishqaggarwal.com">email</a> &nbsp;
+                <a class="material-icons black-text" id = "email">email</a> &nbsp;
                 <a href="http://github.com/tanishqaggarwal" target="_blank" class="material-icons black-text">code</a>
               </span>
             </div>
@@ -296,8 +296,8 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
   <script>
     $(document).ready(function () {
-        $('.modal').modal();
-      });
+      $('.modal').modal();
+    });
 
     $(".button-collapse").sideNav();
     $('.carousel.carousel-slider').carousel({fullWidth:true, indicators:true});
@@ -313,6 +313,16 @@
       $("#" + $(this).data("toggle")).removeClass("hide");
       $("#" + $(this).data("toggle")).addClass("show");
     });
+
+    // Email obfuscation
+    function rot13(str) {
+      var input = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+      var output = 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm';
+      var index = x => input.indexOf(x);
+      var translate = x => index(x) > -1 ? output[index(x)] : x;
+      return str.split('').map(translate).join('');
+    }
+    $("#email").attr("href", rot13("gnavfud@gnavfudnttnejny.pbz"));
   </script>
 </body>
 </html>
