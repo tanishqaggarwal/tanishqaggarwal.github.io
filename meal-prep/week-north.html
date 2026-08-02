@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#1a3c34" />
+  <meta name="description" content="Week 1: Classic North Indian meal prep with calorie counts and portion weights." />
+  <title>Week 1 · Classic North · Meal Prep</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero" data-week="north">
+    <div class="hero-inner">
+      <a class="back-weeks" href="index.html">← All weekly menus</a>
+      <div class="eyebrow">✦ Week 1 · Classic North</div>
+      <h1>Rajma, Chana &amp; Paneer Bhurji</h1>
+      <p>No tofu. Big batches on Sunday. Every lunch and dinner lists plate weight (g) and estimated calories.</p>
+      <div class="hero-tags">
+        <span class="tag">7 days</span>
+        <span class="tag">North Indian</span>
+        <span class="tag">kcal + grams</span>
+      </div>
+    </div>
+  </header>
+
+  <nav class="desktop-nav wide" aria-label="Sections">
+    <a href="index.html">Weeks</a>
+    <a href="#grocery">Grocery</a>
+    <a href="#menu">Menu</a>
+    <a href="#recipes">Recipes</a>
+    <a href="#breakfast">Breakfast</a>
+    <a href="#prep">Sunday prep</a>
+  </nav>
+
+  <section id="grocery" data-storage-key="meal-prep-north-v1">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Grocery list</h2>
+        <p>Short checklist — tap to check off. Saved on this phone.</p>
+      </div>
+
+      <div class="grocery-toolbar">
+        <span class="progress" id="progress" aria-live="polite">0 / 0 done</span>
+        <button type="button" class="btn-ghost" id="clear-checks">Clear all</button>
+      </div>
+
+      <div class="grocery-groups">
+        <div class="grocery-card">
+          <h3>Produce</h3>
+          <ul class="check-list">
+            <li>
+              <label>
+                <input type="checkbox" data-key="p1" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Onions<small>6–8</small></span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-key="p2" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Tomatoes<small>8–10</small></span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-key="p3" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Cucumbers<small>3–4</small></span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-key="p4" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Spinach<small>2 large bunches</small></span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-key="p5" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Ginger + garlic + green chilies<small>1 head garlic · 6–8 chilies</small></span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-key="p6" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Cilantro<small>1 bunch</small></span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-key="p7" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Fruit for the week<small>bananas, berries, apple…</small></span>
+              </label>
+            </li>
+          </ul>
+        </div>
+        <div class="grocery-card">
+          <h3>Dairy &amp; protein</h3>
+          <ul class="check-list">
+            <li>
+              <label>
+                <input type="checkbox" data-key="d1" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Paneer<small>600–700 g</small></span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-key="d2" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Greek yogurt / hung curd<small>1.5–2 kg</small></span>
+              </label>
+            </li>
+          </ul>
+        </div>
+        <div class="grocery-card">
+          <h3>Legumes &amp; grains</h3>
+          <ul class="check-list">
+            <li>
+              <label>
+                <input type="checkbox" data-key="l1" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Yellow moong dal<small>500 g</small></span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-key="l2" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Masoor or toor dal<small>400–500 g</small></span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-key="l3" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Rajma<small>400–500 g (or canned)</small></span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-key="l4" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Kabuli chana<small>400–500 g (or canned)</small></span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-key="l5" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Quinoa or brown rice<small>1 kg</small></span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-key="l6" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Rolled oats<small>500 g</small></span>
+              </label>
+            </li>
+          </ul>
+        </div>
+        <div class="grocery-card">
+          <h3>Snacks &amp; pantry</h3>
+          <ul class="check-list">
+            <li>
+              <label>
+                <input type="checkbox" data-key="s1" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Roasted chana or peanuts<small>200–250 g</small></span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-key="s2" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Almonds / nuts<small>optional</small></span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-key="s3" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Spices you need<small>turmeric, cumin, coriander, garam masala, salt, oil/ghee</small></span>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="menu">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>7-day menu</h2>
+        <p>Lunch + dinner. Always pair a legume dish with yogurt or paneer. Calorie and weight figures are estimates for the plated portions shown.</p>
+      </div>
+
+      <div class="days">
+        <article class="day-card">
+          <div class="media">
+            <img src="images/rajma.jpg" alt="Rajma masala with rice" loading="lazy" width="800" height="500" />
+            <span class="day-badge">Mon</span>
+          </div>
+          <div class="day-body">
+            <div class="meal">
+              <div class="meal-icon" aria-hidden="true">🌞</div>
+              <div>
+                <div class="meal-label">Lunch</div>
+                <div class="meal-title">Rajma + quinoa + cucumber salad + yogurt</div>
+                <div class="meal-meta"><span class="meta-pill kcal">615 kcal</span><span class="meta-pill grams">~630 g plate</span></div>
+                <div class="note-est">250 g curry · 150 g quinoa/rice · 150 g yogurt · 80 g salad</div>
+              </div>
+            </div>
+            <div class="meal">
+              <div class="meal-icon" aria-hidden="true">🌙</div>
+              <div>
+                <div class="meal-label">Dinner</div>
+                <div class="meal-title">Mixed dal (spinach) + 100 g paneer + quinoa</div>
+                <div class="meal-meta"><span class="meta-pill kcal">665 kcal</span><span class="meta-pill grams">~530 g plate</span></div>
+                <div class="note-est">250 g dal · 100 g paneer · 150 g quinoa</div>
+              </div>
+            </div>
+            <div class="day-total"><span>Day total (L+D)</span><strong>~1280 kcal</strong></div>
+          </div>
+        </article>
+        <article class="day-card">
+          <div class="media">
+            <img src="images/chana-masala.jpg" alt="Chana masala with rice" loading="lazy" width="800" height="500" />
+            <span class="day-badge">Tue</span>
+          </div>
+          <div class="day-body">
+            <div class="meal">
+              <div class="meal-icon" aria-hidden="true">🌞</div>
+              <div>
+                <div class="meal-label">Lunch</div>
+                <div class="meal-title">Chana masala + rice/quinoa + raita</div>
+                <div class="meal-meta"><span class="meta-pill kcal">595 kcal</span><span class="meta-pill grams">~600 g plate</span></div>
+                <div class="note-est">250 g curry · 150 g quinoa/rice · 120 g yogurt · 80 g salad</div>
+              </div>
+            </div>
+            <div class="meal">
+              <div class="meal-icon" aria-hidden="true">🌙</div>
+              <div>
+                <div class="meal-label">Dinner</div>
+                <div class="meal-title">Mixed dal + sautéed spinach + quinoa</div>
+                <div class="meal-meta"><span class="meta-pill kcal">455 kcal</span><span class="meta-pill grams">~500 g plate</span></div>
+                <div class="note-est">250 g dal · 100 g spinach · 150 g quinoa</div>
+              </div>
+            </div>
+            <div class="day-total"><span>Day total (L+D)</span><strong>~1050 kcal</strong></div>
+          </div>
+        </article>
+        <article class="day-card">
+          <div class="media">
+            <img src="images/paneer-bhurji.jpg" alt="Paneer bhurji in a pan" loading="lazy" width="800" height="500" />
+            <span class="day-badge">Wed</span>
+          </div>
+          <div class="day-body">
+            <div class="meal">
+              <div class="meal-icon" aria-hidden="true">🌞</div>
+              <div>
+                <div class="meal-label">Lunch</div>
+                <div class="meal-title">Rajma + quinoa + salad + yogurt</div>
+                <div class="meal-meta"><span class="meta-pill kcal">615 kcal</span><span class="meta-pill grams">~630 g plate</span></div>
+                <div class="note-est">250 g curry · 150 g quinoa/rice · 150 g yogurt · 80 g salad</div>
+              </div>
+            </div>
+            <div class="meal">
+              <div class="meal-icon" aria-hidden="true">🌙</div>
+              <div>
+                <div class="meal-label">Dinner</div>
+                <div class="meal-title">Paneer bhurji + large salad or sautéed spinach</div>
+                <div class="meal-meta"><span class="meta-pill kcal">395 kcal</span><span class="meta-pill grams">~350 g plate</span></div>
+                <div class="note-est">180 g bhurji · 120 g greens/salad</div>
+              </div>
+            </div>
+            <div class="day-total"><span>Day total (L+D)</span><strong>~1010 kcal</strong></div>
+          </div>
+        </article>
+        <article class="day-card">
+          <div class="media">
+            <img src="images/mixed-dal.jpg" alt="Mixed dal with spinach" loading="lazy" width="800" height="500" />
+            <span class="day-badge">Thu</span>
+          </div>
+          <div class="day-body">
+            <div class="meal">
+              <div class="meal-icon" aria-hidden="true">🌞</div>
+              <div>
+                <div class="meal-label">Lunch</div>
+                <div class="meal-title">Chana masala + quinoa + raita</div>
+                <div class="meal-meta"><span class="meta-pill kcal">595 kcal</span><span class="meta-pill grams">~600 g plate</span></div>
+                <div class="note-est">250 g curry · 150 g quinoa/rice · 120 g yogurt · 80 g salad</div>
+              </div>
+            </div>
+            <div class="meal">
+              <div class="meal-icon" aria-hidden="true">🌙</div>
+              <div>
+                <div class="meal-label">Dinner</div>
+                <div class="meal-title">Mixed dal (spinach) + quinoa + yogurt</div>
+                <div class="meal-meta"><span class="meta-pill kcal">530 kcal</span><span class="meta-pill grams">~550 g plate</span></div>
+                <div class="note-est">250 g dal · 150 g quinoa · 150 g yogurt</div>
+              </div>
+            </div>
+            <div class="day-total"><span>Day total (L+D)</span><strong>~1125 kcal</strong></div>
+          </div>
+        </article>
+        <article class="day-card">
+          <div class="media">
+            <img src="images/paneer-bhurji.jpg" alt="Paneer bhurji" loading="lazy" width="800" height="500" />
+            <span class="day-badge">Fri</span>
+          </div>
+          <div class="day-body">
+            <div class="meal">
+              <div class="meal-icon" aria-hidden="true">🌞</div>
+              <div>
+                <div class="meal-label">Lunch</div>
+                <div class="meal-title">Rajma + rice/quinoa + salad + yogurt</div>
+                <div class="meal-meta"><span class="meta-pill kcal">615 kcal</span><span class="meta-pill grams">~630 g plate</span></div>
+                <div class="note-est">250 g curry · 150 g quinoa/rice · 150 g yogurt · 80 g salad</div>
+              </div>
+            </div>
+            <div class="meal">
+              <div class="meal-icon" aria-hidden="true">🌙</div>
+              <div>
+                <div class="meal-label">Dinner</div>
+                <div class="meal-title">Paneer bhurji + mixed dal + spinach</div>
+                <div class="meal-meta"><span class="meta-pill kcal">560 kcal</span><span class="meta-pill grams">~480 g plate</span></div>
+                <div class="note-est">150 g bhurji · 200 g dal · 80 g spinach</div>
+              </div>
+            </div>
+            <div class="day-total"><span>Day total (L+D)</span><strong>~1175 kcal</strong></div>
+          </div>
+        </article>
+        <article class="day-card">
+          <div class="media">
+            <img src="images/khichdi.jpg" alt="High-protein khichdi with yogurt" loading="lazy" width="800" height="500" />
+            <span class="day-badge">Sat</span>
+          </div>
+          <div class="day-body">
+            <div class="meal">
+              <div class="meal-icon" aria-hidden="true">🌞</div>
+              <div>
+                <div class="meal-label">Lunch</div>
+                <div class="meal-title">Leftover chana/rajma bowl + extra yogurt + salad</div>
+                <div class="meal-meta"><span class="meta-pill kcal">645 kcal</span><span class="meta-pill grams">~630 g plate</span></div>
+                <div class="note-est">250 g curry · 150 g grain · 200 g yogurt · 80 g salad</div>
+              </div>
+            </div>
+            <div class="meal">
+              <div class="meal-icon" aria-hidden="true">🌙</div>
+              <div>
+                <div class="meal-label">Dinner</div>
+                <div class="meal-title">High-protein khichdi (with spinach) + big yogurt</div>
+                <div class="meal-meta"><span class="meta-pill kcal">580 kcal</span><span class="meta-pill grams">~550 g plate</span></div>
+                <div class="note-est">350 g khichdi · 200 g yogurt</div>
+              </div>
+            </div>
+            <div class="day-total"><span>Day total (L+D)</span><strong>~1225 kcal</strong></div>
+          </div>
+        </article>
+        <article class="day-card">
+          <div class="media">
+            <img src="images/mixed-dal.jpg" alt="Mixed dal with spinach" loading="lazy" width="800" height="500" />
+            <span class="day-badge">Sun</span>
+          </div>
+          <div class="day-body">
+            <div class="meal">
+              <div class="meal-icon" aria-hidden="true">🌞</div>
+              <div>
+                <div class="meal-label">Lunch</div>
+                <div class="meal-title">Remaining batches or paneer + yogurt + salad</div>
+                <div class="meal-meta"><span class="meta-pill kcal">540 kcal</span><span class="meta-pill grams">~480 g plate</span></div>
+                <div class="note-est">100 g paneer · 200 g yogurt · 100 g veg/salad · optional 100 g leftover curry</div>
+              </div>
+            </div>
+            <div class="meal">
+              <div class="meal-icon" aria-hidden="true">🌙</div>
+              <div>
+                <div class="meal-label">Dinner</div>
+                <div class="meal-title">Light mixed dal or leftover khichdi + yogurt</div>
+                <div class="meal-meta"><span class="meta-pill kcal">410 kcal</span><span class="meta-pill grams">~450 g plate</span></div>
+                <div class="note-est">280 g dal/khichdi · 150 g yogurt</div>
+              </div>
+            </div>
+            <div class="day-total"><span>Day total (L+D)</span><strong>~950 kcal</strong></div>
+          </div>
+        </article>
+      </div>
+
+      <div class="snack-strip" aria-label="Snacks">
+        <span class="chip">🥜 Roasted chana<span class="chip-meta">30 g · ~110 kcal</span></span>
+        <span class="chip">🥣 Greek yogurt<span class="chip-meta">150 g · ~130 kcal</span></span>
+        <span class="chip">🥒 Cucumber + yogurt<span class="chip-meta">200 g · ~90 kcal</span></span>
+      </div>
+      <p class="note-est" style="margin-top:0.85rem;">Snack kcal are per single serving. Breakfast (~320–450 kcal) is extra each day.</p>
+    </div>
+  </section>
+
+  <section id="recipes">
+    <div class="wide">
+      <div class="section-head wrap" style="width: min(720px, 100%); margin-inline: auto; margin-bottom: 1.25rem;">
+        <h2>Core recipes</h2>
+        <p>Batch on Sunday. Exact mix amounts below — scale with a kitchen scale when you can.</p>
+      </div>
+
+      <div class="recipes">
+        <article class="recipe">
+          <div class="media">
+            <img src="images/mixed-dal.jpg" alt="Mixed dal with spinach" loading="lazy" width="800" height="600" />
+          </div>
+          <div class="recipe-body">
+            <h3>Mixed Dal (with Spinach)</h3>
+            <div class="servings">7 servings · ~1.75 kg batch</div>
+            <div class="recipe-macros">
+              <span class="meta-pill kcal">~220 kcal / serving</span>
+              <span class="meta-pill grams">~250 g cooked</span>
+            </div>
+            <div class="ing-block">
+              <h4>Dal (pressure cooker)</h4>
+              <ul class="ing-list">
+                <li><span class="amt">200 g</span> yellow moong dal (about 1 cup)</li>
+                <li><span class="amt">200 g</span> masoor dal (about 1 cup)</li>
+                <li><span class="amt">1.2 L</span> water (about 5 cups)</li>
+                <li><span class="amt">1 tsp</span> turmeric</li>
+                <li><span class="amt">1½ tsp</span> salt</li>
+              </ul>
+            </div>
+            <div class="ing-block">
+              <h4>Temper / masala</h4>
+              <ul class="ing-list">
+                <li><span class="amt">2 tbsp</span> oil or ghee</li>
+                <li><span class="amt">1 tsp</span> cumin seeds</li>
+                <li><span class="amt">1 large</span> onion, finely chopped (~200 g)</li>
+                <li><span class="amt">1 tbsp</span> ginger-garlic paste (or 1-inch ginger + 4 cloves, minced)</li>
+                <li><span class="amt">2 medium</span> tomatoes, chopped (~250 g)</li>
+                <li><span class="amt">1–2</span> green chilies, slit</li>
+                <li><span class="amt">½ tsp</span> red chili powder (optional)</li>
+              </ul>
+            </div>
+            <div class="ing-block">
+              <h4>Finish</h4>
+              <ul class="ing-list">
+                <li><span class="amt">150–200 g</span> spinach leaves, washed & roughly chopped (½–1 bunch)</li>
+              </ul>
+            </div>
+            <div class="ing-block">
+              <h4>Method</h4>
+              <ol class="method-list">
+              <li>Rinse dals until water runs clear. Pressure-cook with water, turmeric, and salt: 3–4 whistles / ~12 min on high pressure. Mash lightly — keep thick.</li>
+              <li>Heat oil in a pan. Add cumin until it sizzles (~20 sec).</li>
+              <li>Add onion; cook 5–6 min until golden. Stir in ginger-garlic and chili 1 min.</li>
+              <li>Add tomatoes (+ chili powder). Cook 4–5 min until soft and jammy.</li>
+              <li>Pour cooked dal into the pan (or reverse). Simmer 5–8 min, adding a splash of water only if too thick.</li>
+              <li>Stir in spinach until wilted (1–2 min). Taste salt. Cool and portion ~250 g per serving.</li>
+              </ol>
+            </div>
+            <p class="note-est">Batch target ~1.75 kg. Reheat with 2–3 tbsp water per portion.</p>
+          </div>
+        </article>
+        <article class="recipe">
+          <div class="media">
+            <img src="images/rajma.jpg" alt="Rajma masala" loading="lazy" width="800" height="600" />
+          </div>
+          <div class="recipe-body">
+            <h3>Rajma Masala</h3>
+            <div class="servings">6 servings · ~1.5 kg batch</div>
+            <div class="recipe-macros">
+              <span class="meta-pill kcal">~290 kcal / serving</span>
+              <span class="meta-pill grams">~250 g cooked</span>
+            </div>
+            <div class="ing-block">
+              <h4>Beans</h4>
+              <ul class="ing-list">
+                <li><span class="amt">450 g</span> dry rajma, soaked 8 hrs (or 3 × 400 g cans, drained ~1.1 kg)</li>
+                <li><span class="amt">—</span> water to cover by 5 cm for pressure-cooking</li>
+                <li><span class="amt">1 tsp</span> salt (for cooking water)</li>
+              </ul>
+            </div>
+            <div class="ing-block">
+              <h4>Masala base</h4>
+              <ul class="ing-list">
+                <li><span class="amt">3 tbsp</span> oil</li>
+                <li><span class="amt">2 large</span> onions, finely chopped (~400 g)</li>
+                <li><span class="amt">1 tbsp</span> ginger-garlic paste</li>
+                <li><span class="amt">3 medium</span> tomatoes, puréed or finely chopped (~400 g)</li>
+                <li><span class="amt">2 tsp</span> cumin powder</li>
+                <li><span class="amt">2 tsp</span> coriander powder</li>
+                <li><span class="amt">1 tsp</span> turmeric</li>
+                <li><span class="amt">1–1½ tsp</span> red chili powder (to taste)</li>
+                <li><span class="amt">2 tsp</span> rajma masala or garam masala</li>
+                <li><span class="amt">1 tsp</span> amchur (or 1 tbsp lemon juice)</li>
+                <li><span class="amt">1–1½ tsp</span> salt (to taste)</li>
+                <li><span class="amt">240 ml</span> water (1 cup), plus more as needed</li>
+              </ul>
+            </div>
+            <div class="ing-block">
+              <h4>Method</h4>
+              <ol class="method-list">
+              <li>Drain soaked rajma. Pressure-cook with fresh water + 1 tsp salt until very soft (usually 25–35 min / 8–10 whistles). Reserve ~1 cup cooking liquid.</li>
+              <li>Heat oil. Cook onions 8–10 min until deep golden.</li>
+              <li>Add ginger-garlic 1 min, then tomato. Cook 6–8 min until oil separates.</li>
+              <li>Stir in all powdered spices 30 sec. Add 240 ml water; simmer 2 min.</li>
+              <li>Add drained rajma + ½–1 cup cooking liquid. Mash ~¼ of the beans against the pot for body.</li>
+              <li>Simmer uncovered 15–20 min until gravy coats a spoon. Adjust salt. Portion ~250 g.</li>
+              </ol>
+            </div>
+            <p class="note-est">From ~450 g dry rajma. Canned: use ~1.1 kg drained beans; skip long cook.</p>
+          </div>
+        </article>
+        <article class="recipe">
+          <div class="media">
+            <img src="images/chana-masala.jpg" alt="Chana masala" loading="lazy" width="800" height="600" />
+          </div>
+          <div class="recipe-body">
+            <h3>Chana Masala</h3>
+            <div class="servings">6 servings · ~1.5 kg batch</div>
+            <div class="recipe-macros">
+              <span class="meta-pill kcal">~300 kcal / serving</span>
+              <span class="meta-pill grams">~250 g cooked</span>
+            </div>
+            <div class="ing-block">
+              <h4>Chickpeas</h4>
+              <ul class="ing-list">
+                <li><span class="amt">450 g</span> dry kabuli chana, soaked 8 hrs (or 3 × 400 g cans, drained)</li>
+                <li><span class="amt">1 tsp</span> salt (for cooking)</li>
+                <li><span class="amt">1</span> tea bag or ½ tsp baking soda optional for softer chana</li>
+              </ul>
+            </div>
+            <div class="ing-block">
+              <h4>Masala base</h4>
+              <ul class="ing-list">
+                <li><span class="amt">3 tbsp</span> oil</li>
+                <li><span class="amt">2 large</span> onions, finely chopped (~400 g)</li>
+                <li><span class="amt">1 tbsp</span> ginger-garlic paste</li>
+                <li><span class="amt">3 medium</span> tomatoes, chopped or puréed (~400 g)</li>
+                <li><span class="amt">2 tsp</span> cumin powder</li>
+                <li><span class="amt">2 tsp</span> coriander powder</li>
+                <li><span class="amt">1 tsp</span> turmeric</li>
+                <li><span class="amt">1–2 tsp</span> chana masala powder</li>
+                <li><span class="amt">1 tsp</span> garam masala</li>
+                <li><span class="amt">1 tsp</span> amchur or chaat masala (optional)</li>
+                <li><span class="amt">1–1½ tsp</span> salt</li>
+                <li><span class="amt">240 ml</span> water (1 cup)</li>
+              </ul>
+            </div>
+            <div class="ing-block">
+              <h4>Method</h4>
+              <ol class="method-list">
+              <li>Pressure-cook soaked chana with salt until soft but not mushy. Drain; keep 1 cup liquid.</li>
+              <li>Same masala as rajma: golden onions → ginger-garlic → tomato → spice powders.</li>
+              <li>Add chana + ½–1 cup liquid. Simmer 15–20 min. Lightly crush a few chana for thickness.</li>
+              <li>Finish with garam masala + amchur. Portion ~250 g.</li>
+              </ol>
+            </div>
+            <p class="note-est">Uses ~450 g dry kabuli chana. Same onion-tomato base volume as rajma.</p>
+          </div>
+        </article>
+        <article class="recipe">
+          <div class="media">
+            <img src="images/paneer-bhurji.jpg" alt="Paneer bhurji" loading="lazy" width="800" height="600" />
+          </div>
+          <div class="recipe-body">
+            <h3>Paneer Bhurji</h3>
+            <div class="servings">4 servings · ~700 g batch</div>
+            <div class="recipe-macros">
+              <span class="meta-pill kcal">~340 kcal / serving</span>
+              <span class="meta-pill grams">~175 g cooked</span>
+            </div>
+            <div class="ing-block">
+              <h4>Mix in the pan</h4>
+              <ul class="ing-list">
+                <li><span class="amt">350 g</span> paneer, crumbled (not tiny dust — pea-sized bits)</li>
+                <li><span class="amt">2 tbsp</span> oil</li>
+                <li><span class="amt">2 medium</span> onions, finely chopped (~250 g)</li>
+                <li><span class="amt">2 medium</span> tomatoes, chopped (~250 g)</li>
+                <li><span class="amt">1 tbsp</span> ginger, minced (or 1-inch piece)</li>
+                <li><span class="amt">2</span> green chilies, finely chopped</li>
+                <li><span class="amt">½ tsp</span> turmeric</li>
+                <li><span class="amt">1 tsp</span> cumin seeds or ¾ tsp cumin powder</li>
+                <li><span class="amt">1 tsp</span> garam masala</li>
+                <li><span class="amt">¾–1 tsp</span> salt</li>
+                <li><span class="amt">2 tbsp</span> chopped cilantro (optional finish)</li>
+              </ul>
+            </div>
+            <div class="ing-block">
+              <h4>Method</h4>
+              <ol class="method-list">
+              <li>Heat oil. Bloom cumin seeds 20 sec (if using).</li>
+              <li>Add onion + chili; cook 5–6 min until soft and lightly browned.</li>
+              <li>Add ginger 30 sec, then tomato + turmeric + salt. Cook 4–5 min until tomato softens and moisture drops.</li>
+              <li>Add crumbled paneer + garam masala (+ cumin powder if not using seeds). Stir-fry 5–7 min on medium — don’t dry it to dust.</li>
+              <li>Off heat: cilantro. Portion ~175 g (about ¼ of batch).</li>
+              </ol>
+            </div>
+            <p class="note-est">From 350 g paneer + veg. Dense protein — pair with salad or dal, not more grain if calories are tight.</p>
+          </div>
+        </article>
+        <article class="recipe">
+          <div class="media">
+            <img src="images/khichdi.jpg" alt="High-protein khichdi" loading="lazy" width="800" height="600" />
+          </div>
+          <div class="recipe-body">
+            <h3>High-Protein Khichdi</h3>
+            <div class="servings">4 servings · ~1.4 kg batch</div>
+            <div class="recipe-macros">
+              <span class="meta-pill kcal">~420 kcal / serving</span>
+              <span class="meta-pill grams">~350 g cooked</span>
+            </div>
+            <div class="ing-block">
+              <h4>Cook together (pot / Instant Pot)</h4>
+              <ul class="ing-list">
+                <li><span class="amt">200 g</span> mixed dal — moong + masoor (about 1 cup)</li>
+                <li><span class="amt">120 g</span> quinoa or rice (about ⅔ cup)</li>
+                <li><span class="amt">1 L</span> water (about 4¼ cups) — add 120 ml more if you like it looser</li>
+                <li><span class="amt">1 tsp</span> turmeric</li>
+                <li><span class="amt">1½ tsp</span> salt</li>
+              </ul>
+            </div>
+            <div class="ing-block">
+              <h4>Temper</h4>
+              <ul class="ing-list">
+                <li><span class="amt">2 tbsp</span> ghee or oil</li>
+                <li><span class="amt">1 tsp</span> cumin seeds</li>
+                <li><span class="amt">1 medium</span> onion, chopped (~150 g)</li>
+                <li><span class="amt">1 medium</span> tomato, chopped (~150 g)</li>
+                <li><span class="amt">1 tbsp</span> ginger-garlic paste</li>
+                <li><span class="amt">1–2</span> green chilies, slit</li>
+              </ul>
+            </div>
+            <div class="ing-block">
+              <h4>Finish</h4>
+              <ul class="ing-list">
+                <li><span class="amt">100–150 g</span> spinach, chopped</li>
+                <li><span class="amt">—</span> serve each bowl with 150–200 g Greek yogurt</li>
+              </ul>
+            </div>
+            <div class="ing-block">
+              <h4>Method</h4>
+              <ol class="method-list">
+              <li>Rinse dal + grain. Pressure-cook with water, turmeric, salt until soft and porridge-like (about 3–4 whistles / 10–12 min high pressure). Rest 5 min, then open and stir.</li>
+              <li>In a small pan: heat ghee, cumin, then onion 4 min → ginger-garlic + chili 1 min → tomato 3 min.</li>
+              <li>Fold temper into khichdi. Stir in spinach until wilted. Adjust salt/water.</li>
+              <li>Portion ~350 g. Top with yogurt at serving (not in the batch if storing).</li>
+              </ol>
+            </div>
+            <p class="note-est">Dry mix: 200 g dal + 120 g grain. Yogurt on top is extra kcal (~130 per 150 g).</p>
+          </div>
+        </article>
+        <article class="recipe">
+          <div class="media">
+            <img src="images/sauteed-spinach.jpg" alt="Sautéed spinach" loading="lazy" width="800" height="600" />
+          </div>
+          <div class="recipe-body">
+            <h3>Simple Sautéed Spinach</h3>
+            <div class="servings">4 sides · ~400 g batch</div>
+            <div class="recipe-macros">
+              <span class="meta-pill kcal">~55 kcal / serving</span>
+              <span class="meta-pill grams">~100 g cooked</span>
+            </div>
+            <div class="ing-block">
+              <h4>In the pan</h4>
+              <ul class="ing-list">
+                <li><span class="amt">400 g</span> spinach leaves (about 2 bunches after tough stems removed)</li>
+                <li><span class="amt">4 tsp</span> oil (1 tsp per serving)</li>
+                <li><span class="amt">1 tsp</span> cumin seeds</li>
+                <li><span class="amt">3–4</span> garlic cloves, sliced</li>
+                <li><span class="amt">1</span> green chili, slit (optional)</li>
+                <li><span class="amt">¼ tsp</span> turmeric</li>
+                <li><span class="amt">½ tsp</span> salt (or to taste)</li>
+              </ul>
+            </div>
+            <div class="ing-block">
+              <h4>Method</h4>
+              <ol class="method-list">
+              <li>Heat oil. Add cumin 15 sec, then garlic (+ chili) until just golden — don’t burn.</li>
+              <li>Add spinach in handfuls with turmeric and salt. Toss 2–3 min until wilted and most water evaporates.</li>
+              <li>Portion ~100 g. Best made mid-week fresh, or reheat quickly in a dry pan.</li>
+              </ol>
+            </div>
+            <p class="note-est">Low-cal volume side. 1 tsp oil per serving keeps it near ~55 kcal.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="breakfast">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Grab-and-go breakfasts</h2>
+        <p>Pick one every morning. Weights are as prepared in the jar/bowl.</p>
+      </div>
+
+      <div class="breakfast-grid">
+        <article class="b-card">
+          <div class="media">
+            <img src="images/overnight-oats.jpg" alt="Overnight oats with banana, berries, and nuts" loading="lazy" width="700" height="700" />
+          </div>
+          <div class="body">
+            <span class="time">Night before · best option</span>
+            <h3>Overnight Oats</h3>
+            <div class="macros">
+              <span class="meta-pill kcal">~450 kcal</span>
+              <span class="meta-pill grams">~420 g jar</span>
+            </div>
+            <ul>
+              <li>40 g (½ cup) rolled oats</li>
+              <li>175 g Greek yogurt</li>
+              <li>120 ml milk or water</li>
+              <li>~100 g fruit + optional 10 g nuts</li>
+            </ul>
+            <p class="how"><strong>Night:</strong> mix oats + yogurt + liquid. <strong>Morning:</strong> fruit + toppings.</p>
+            <p class="note-est">~450 kcal with banana; berries leaner (~400).</p>
+          </div>
+        </article>
+
+        <article class="b-card">
+          <div class="media">
+            <img src="images/yogurt-jar.jpg" alt="Greek yogurt jar with apple, blueberries, and roasted chickpeas" loading="lazy" width="700" height="700" />
+          </div>
+          <div class="body">
+            <span class="time">1–2 minutes</span>
+            <h3>Greek Yogurt Jar</h3>
+            <div class="macros">
+              <span class="meta-pill kcal">~320 kcal</span>
+              <span class="meta-pill grams">~350 g jar</span>
+            </div>
+            <ul>
+              <li>225 g Greek yogurt</li>
+              <li>100 g fruit, chopped</li>
+              <li>Optional: 20 g roasted chana (~80 kcal extra)</li>
+            </ul>
+            <p class="how">Layer the night before or morning of. Ready in under 2 minutes.</p>
+            <p class="note-est">Base jar ~320 kcal; + roasted chana ≈ 400 kcal.</p>
+          </div>
+        </article>
+
+        <article class="b-card">
+          <div class="media">
+            <img src="images/hot-oatmeal.jpg" alt="Hot oatmeal with Greek yogurt, banana, and strawberries" loading="lazy" width="700" height="700" />
+          </div>
+          <div class="body">
+            <span class="time">Under 5 minutes</span>
+            <h3>Quick Hot Oatmeal</h3>
+            <div class="macros">
+              <span class="meta-pill kcal">~420 kcal</span>
+              <span class="meta-pill grams">~400 g bowl</span>
+            </div>
+            <ul>
+              <li>40 g rolled oats + ~200 ml water/milk</li>
+              <li>Microwave 2–3 min</li>
+              <li>125 g Greek yogurt + ~80 g fruit</li>
+            </ul>
+            <p class="how">Stovetop or microwave. Finish with yogurt for protein.</p>
+            <p class="note-est">With water base ~420 kcal; whole milk adds ~60–80.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="prep">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Sunday prep</h2>
+        <p>Aim for ~2–2.5 hours active. Do Saturday night soaks so Sunday is mostly cook + portion.</p>
+      </div>
+      <div class="prep-flow">
+        <div class="prep-phase">
+          <div class="prep-phase-head">
+            <h3>Saturday night (optional but worth it)</h3>
+            <span class="time">~5 min</span>
+          </div>
+          <ol class="prep-list">
+          <li><strong>Soak</strong> 450 g rajma and 450 g kabuli chana in plenty of water (8 hrs). Skip if using canned.</li>
+          <li>Optional: wash spinach and store dry in a towel-lined box.</li>
+          </ol>
+        </div>
+        <div class="prep-phase">
+          <div class="prep-phase-head">
+            <h3>Phase 1 — Start the long cooks (parallel)</h3>
+            <span class="time">~10 min to start · 30–45 min unattended</span>
+          </div>
+          <ol class="prep-list">
+          <li><strong>Drain</strong> soaked beans. Put <strong>rajma</strong> and <strong>chana</strong> on to pressure-cook (or open cans and rinse).</li>
+          <li>In a second cooker/pot: rinse and start <strong>mixed dal</strong> — 200 g moong + 200 g masoor + 1.2 L water + turmeric + salt.</li>
+          <li>Put <strong>quinoa/rice</strong> on (4–5 cups dry → ~1.2–1.5 kg cooked) so grains finish while you cook masala.</li>
+          <li><em>While pots run → Phase 2. Don’t wait idle.</em></li>
+          </ol>
+        </div>
+        <div class="prep-phase">
+          <div class="prep-phase-head">
+            <h3>Phase 2 — One big masala + prep paneer</h3>
+            <span class="time">~25–30 min (while beans/dal cook)</span>
+          </div>
+          <ol class="prep-list">
+          <li>Chop once: <strong>4–5 onions, 6–7 tomatoes</strong>, ginger-garlic, chilies, cilantro.</li>
+          <li>Make a <strong>large onion-tomato masala base</strong> (enough for both rajma and chana). Keep half in the pan; park half in a bowl.</li>
+          <li>Crumble <strong>~350 g paneer</strong> for bhurji; cube any remaining paneer for Mon dinner add-ins. Keep chilled.</li>
+          <li>Wash/chop spinach; keep half for dal, half for mid-week sauté.</li>
+          </ol>
+        </div>
+        <div class="prep-phase">
+          <div class="prep-phase-head">
+            <h3>Phase 3 — Finish curries</h3>
+            <span class="time">~35–45 min</span>
+          </div>
+          <ol class="prep-list">
+          <li>When dal is soft: temper (cumin → onion scrap → tomato scrap) or fold into a ladle of base; stir in half the spinach. Cool thick. <strong>Target ~1.75 kg · ~250 g portions.</strong></li>
+          <li>When rajma is soft: combine with half the masala base + spices; simmer 15–20 min. <strong>~1.5 kg · ~250 g portions.</strong></li>
+          <li>Same with chana + remaining base + chana masala. <strong>~1.5 kg · ~250 g portions.</strong></li>
+          <li>Cook <strong>paneer bhurji</strong> in one pan (onion → tomato → spices → 350 g paneer, 5–7 min). <strong>~700 g batch · ~175 g portions.</strong></li>
+          </ol>
+        </div>
+        <div class="prep-phase">
+          <div class="prep-phase-head">
+            <h3>Phase 4 — Portion & store</h3>
+            <span class="time">~15 min</span>
+          </div>
+          <ol class="prep-list">
+          <li>Cool everything uncovered 10–15 min (steam = watery fridge food).</li>
+          <li>Box by meal: curry 250 g + grain 150 g labels help. Yogurt in 150–200 g cups.</li>
+          <li>Chop cucumber/salad veg for 2–3 days only (rest mid-week). Fruit for breakfasts.</li>
+          <li>Friday night: turn leftover dal + grain into <strong>khichdi</strong> if you prefer it fresh (or cook Sat from dry mix).</li>
+          </ol>
+        </div>
+      </div>
+      <p class="prep-note"><strong>Efficiency rule:</strong> Never cook one pot at a time. Beans + dal + grain should all be running before you start the big masala. Mid-week sauté spinach takes 3 minutes — don’t batch-wilt it on Sunday.</p>
+    </div>
+  </section>
+
+  <section id="tips">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Daily tips</h2>
+      </div>
+      <div class="tips">
+        <div class="tip">
+          <strong>Reheat</strong>
+          Splash of water on curries. Weigh after reheating if tracking tightly.
+        </div>
+        <div class="tip">
+          <strong>Protein rule</strong>
+          Legume dish + yogurt or paneer. 150 g Greek yogurt ≈ 15–20 g protein.
+        </div>
+        <div class="tip">
+          <strong>Scale tip</strong>
+          Plate: 250 g curry + 150 g grain is the default template.
+        </div>
+        <div class="tip">
+          <strong>Estimates</strong>
+          Home oil and brand differences swing totals about ±15%.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    Week 1 · estimates ±15% · scale for accuracy
+  </footer>
+
+  <nav class="bottom-nav" aria-label="Quick jump">
+    <a href="#grocery">
+      <svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+      List
+    </a>
+    <a href="#menu">
+      <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+      Menu
+    </a>
+    <a href="#recipes">
+      <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+      Recipes
+    </a>
+    <a href="#breakfast">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+      Breakfast
+    </a>
+  </nav>
+
+  <script src="grocery.js"></script>
+</body>
+</html>

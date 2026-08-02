@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#1a3c34" />
+  <meta name="description" content="Week 3 North Indian: bhindi, baingan bharta, kadai paneer, chole, arhar dal." />
+  <title>Week 3 · Bazaar Veg · Meal Prep</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero" data-week="veg">
+    <div class="hero-inner">
+      <a class="back-weeks" href="index.html">← All weekly menus</a>
+      <div class="eyebrow">✦ Week 3 · Bazaar Veg</div>
+      <h1>Bhindi, Bharta &amp; Kadai Paneer</h1>
+      <p>North Indian sabzi week — okra, smoky eggplant, kadai paneer, chole, and arhar dal. No mushrooms, no South Indian dishes.</p>
+      <div class="hero-tags">
+        <span class="tag">7 days</span>
+        <span class="tag">North Indian</span>
+        <span class="tag">kcal + grams</span>
+      </div>
+    </div>
+  </header>
+
+  <nav class="desktop-nav wide" aria-label="Sections">
+    <a href="index.html">Weeks</a>
+    <a href="#grocery">Grocery</a>
+    <a href="#menu">Menu</a>
+    <a href="#recipes">Recipes</a>
+    <a href="#breakfast">Breakfast</a>
+    <a href="#prep">Sunday prep</a>
+  </nav>
+
+  <section id="grocery" data-storage-key="meal-prep-veg-v1">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Grocery list</h2>
+        <p>Short checklist — tap to check off. Saved on this phone.</p>
+      </div>
+      <div class="grocery-toolbar">
+        <span class="progress" id="progress" aria-live="polite">0 / 0 done</span>
+        <button type="button" class="btn-ghost" id="clear-checks">Clear all</button>
+      </div>
+      <div class="grocery-groups">
+        <div class="grocery-card">
+          <h3>Produce</h3>
+          <ul class="check-list">
+            <li>
+              <label>
+                <input type="checkbox" data-key="p1" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Onions<small>8–10</small></span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-key="p2" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Tomatoes<small>8–10</small></span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-key="p3" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Bhindi (okra)<small>500 g</small></span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-key="p4" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Baingan (eggplant)<small>1 kg large</small></span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-key="p5" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Capsicum / bell peppers<small>2 large — no mushrooms</small></span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-key="p6" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Potatoes<small>700 g (jeera aloo)</small></span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-key="p7" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Cucumbers<small>3–4</small></span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-key="p8" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Ginger + garlic + green chilies + cilantro</span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-key="p9" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Fruit for the week</span>
+              </label>
+            </li>
+          </ul>
+        </div>
+        <div class="grocery-card">
+          <h3>Dairy &amp; protein</h3>
+          <ul class="check-list">
+            <li>
+              <label>
+                <input type="checkbox" data-key="d1" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Paneer<small>500–600 g</small></span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-key="d2" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Greek yogurt / hung curd<small>1.5–2 kg</small></span>
+              </label>
+            </li>
+          </ul>
+        </div>
+        <div class="grocery-card">
+          <h3>Legumes &amp; grains</h3>
+          <ul class="check-list">
+            <li>
+              <label>
+                <input type="checkbox" data-key="l1" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Kabuli chana<small>450–500 g (or canned)</small></span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-key="l2" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Arhar / toor dal<small>400–500 g</small></span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-key="l3" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Quinoa or brown rice<small>1 kg</small></span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-key="l4" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Rolled oats<small>500 g</small></span>
+              </label>
+            </li>
+          </ul>
+        </div>
+        <div class="grocery-card">
+          <h3>Snacks &amp; pantry</h3>
+          <ul class="check-list">
+            <li>
+              <label>
+                <input type="checkbox" data-key="s1" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Roasted chana or peanuts<small>200–250 g</small></span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-key="s2" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Spices<small>cumin, coriander, turmeric, chole masala, amchur, garam masala, kasuri methi, salt, oil/ghee</small></span>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="menu">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>7-day menu</h2>
+        <p>Lunch + dinner. Pair every sabzi plate with dal, chole, paneer, or yogurt for protein. Calorie and weight figures are estimates for the plated portions shown. No mushrooms.</p>
+      </div>
+      <div class="days">
+        <article class="day-card">
+          <div class="media">
+            <img src="images/chana-masala.jpg" alt="Chole bowl" loading="lazy" width="800" height="500" />
+            <span class="day-badge">Mon</span>
+          </div>
+          <div class="day-body">
+            <div class="meal">
+              <div class="meal-icon" aria-hidden="true">🌞</div>
+              <div>
+                <div class="meal-label">Lunch</div>
+                <div class="meal-title">Chole + quinoa + cucumber + yogurt</div>
+                <div class="meal-meta"><span class="meta-pill kcal">625 kcal</span><span class="meta-pill grams">~630 g plate</span></div>
+                <div class="note-est">250 g chole · 150 g quinoa · 80 g cucumber · 150 g yogurt</div>
+              </div>
+            </div>
+            <div class="meal">
+              <div class="meal-icon" aria-hidden="true">🌙</div>
+              <div>
+                <div class="meal-label">Dinner</div>
+                <div class="meal-title">Arhar dal + bhindi masala + quinoa</div>
+                <div class="meal-meta"><span class="meta-pill kcal">520 kcal</span><span class="meta-pill grams">~550 g plate</span></div>
+                <div class="note-est">250 g dal · 150 g bhindi · 150 g quinoa</div>
+              </div>
+            </div>
+            <div class="day-total"><span>Day total (L+D)</span><strong>~1145 kcal</strong></div>
+          </div>
+        </article>
+        <article class="day-card">
+          <div class="media">
+            <img src="images/bhindi-masala.jpg" alt="Bhindi masala" loading="lazy" width="800" height="500" />
+            <span class="day-badge">Tue</span>
+          </div>
+          <div class="day-body">
+            <div class="meal">
+              <div class="meal-icon" aria-hidden="true">🌞</div>
+              <div>
+                <div class="meal-label">Lunch</div>
+                <div class="meal-title">Chole + rice/quinoa + raita</div>
+                <div class="meal-meta"><span class="meta-pill kcal">580 kcal</span><span class="meta-pill grams">~600 g plate</span></div>
+                <div class="note-est">250 g chole · 150 g grain · 120 g raita</div>
+              </div>
+            </div>
+            <div class="meal">
+              <div class="meal-icon" aria-hidden="true">🌙</div>
+              <div>
+                <div class="meal-label">Dinner</div>
+                <div class="meal-title">Kadai paneer + baingan bharta + salad</div>
+                <div class="meal-meta"><span class="meta-pill kcal">570 kcal</span><span class="meta-pill grams">~520 g plate</span></div>
+                <div class="note-est">280 g kadai paneer · 150 g bharta · 80 g salad</div>
+              </div>
+            </div>
+            <div class="day-total"><span>Day total (L+D)</span><strong>~1150 kcal</strong></div>
+          </div>
+        </article>
+        <article class="day-card">
+          <div class="media">
+            <img src="images/baingan-bharta.jpg" alt="Baingan bharta" loading="lazy" width="800" height="500" />
+            <span class="day-badge">Wed</span>
+          </div>
+          <div class="day-body">
+            <div class="meal">
+              <div class="meal-icon" aria-hidden="true">🌞</div>
+              <div>
+                <div class="meal-label">Lunch</div>
+                <div class="meal-title">Arhar dal + quinoa + yogurt + salad</div>
+                <div class="meal-meta"><span class="meta-pill kcal">545 kcal</span><span class="meta-pill grams">~600 g plate</span></div>
+                <div class="note-est">250 g dal · 150 g quinoa · 150 g yogurt · 80 g salad</div>
+              </div>
+            </div>
+            <div class="meal">
+              <div class="meal-icon" aria-hidden="true">🌙</div>
+              <div>
+                <div class="meal-label">Dinner</div>
+                <div class="meal-title">Bhindi + chole leftover + yogurt</div>
+                <div class="meal-meta"><span class="meta-pill kcal">500 kcal</span><span class="meta-pill grams">~530 g plate</span></div>
+                <div class="note-est">150 g bhindi · 200 g chole · 150 g yogurt</div>
+              </div>
+            </div>
+            <div class="day-total"><span>Day total (L+D)</span><strong>~1045 kcal</strong></div>
+          </div>
+        </article>
+        <article class="day-card">
+          <div class="media">
+            <img src="images/kadai-paneer.jpg" alt="Kadai paneer" loading="lazy" width="800" height="500" />
+            <span class="day-badge">Thu</span>
+          </div>
+          <div class="day-body">
+            <div class="meal">
+              <div class="meal-icon" aria-hidden="true">🌞</div>
+              <div>
+                <div class="meal-label">Lunch</div>
+                <div class="meal-title">Chole bowl + extra yogurt + salad</div>
+                <div class="meal-meta"><span class="meta-pill kcal">655 kcal</span><span class="meta-pill grams">~650 g plate</span></div>
+                <div class="note-est">250 g chole · 150 g grain · 200 g yogurt · 80 g salad</div>
+              </div>
+            </div>
+            <div class="meal">
+              <div class="meal-icon" aria-hidden="true">🌙</div>
+              <div>
+                <div class="meal-label">Dinner</div>
+                <div class="meal-title">Kadai paneer + arhar dal + salad</div>
+                <div class="meal-meta"><span class="meta-pill kcal">610 kcal</span><span class="meta-pill grams">~560 g plate</span></div>
+                <div class="note-est">250 g kadai paneer · 200 g dal · 80 g salad</div>
+              </div>
+            </div>
+            <div class="day-total"><span>Day total (L+D)</span><strong>~1265 kcal</strong></div>
+          </div>
+        </article>
+        <article class="day-card">
+          <div class="media">
+            <img src="images/moong-tadka.jpg" alt="Arhar dal" loading="lazy" width="800" height="500" />
+            <span class="day-badge">Fri</span>
+          </div>
+          <div class="day-body">
+            <div class="meal">
+              <div class="meal-icon" aria-hidden="true">🌞</div>
+              <div>
+                <div class="meal-label">Lunch</div>
+                <div class="meal-title">Arhar dal + bhindi + quinoa</div>
+                <div class="meal-meta"><span class="meta-pill kcal">520 kcal</span><span class="meta-pill grams">~550 g plate</span></div>
+                <div class="note-est">250 g dal · 150 g bhindi · 150 g quinoa</div>
+              </div>
+            </div>
+            <div class="meal">
+              <div class="meal-icon" aria-hidden="true">🌙</div>
+              <div>
+                <div class="meal-label">Dinner</div>
+                <div class="meal-title">Baingan bharta + kadai paneer leftover + yogurt</div>
+                <div class="meal-meta"><span class="meta-pill kcal">570 kcal</span><span class="meta-pill grams">~530 g plate</span></div>
+                <div class="note-est">150 g bharta · 200 g kadai paneer · 150 g yogurt</div>
+              </div>
+            </div>
+            <div class="day-total"><span>Day total (L+D)</span><strong>~1090 kcal</strong></div>
+          </div>
+        </article>
+        <article class="day-card">
+          <div class="media">
+            <img src="images/chana-masala.jpg" alt="Chole leftover bowl" loading="lazy" width="800" height="500" />
+            <span class="day-badge">Sat</span>
+          </div>
+          <div class="day-body">
+            <div class="meal">
+              <div class="meal-icon" aria-hidden="true">🌞</div>
+              <div>
+                <div class="meal-label">Lunch</div>
+                <div class="meal-title">Leftover chole/dal bowl + yogurt + salad</div>
+                <div class="meal-meta"><span class="meta-pill kcal">645 kcal</span><span class="meta-pill grams">~640 g plate</span></div>
+                <div class="note-est">250 g curry · 150 g grain · 200 g yogurt · 80 g salad</div>
+              </div>
+            </div>
+            <div class="meal">
+              <div class="meal-icon" aria-hidden="true">🌙</div>
+              <div>
+                <div class="meal-label">Dinner</div>
+                <div class="meal-title">Kadai paneer + bhindi + quinoa</div>
+                <div class="meal-meta"><span class="meta-pill kcal">660 kcal</span><span class="meta-pill grams">~560 g plate</span></div>
+                <div class="note-est">250 g kadai paneer · 120 g bhindi · 150 g quinoa</div>
+              </div>
+            </div>
+            <div class="day-total"><span>Day total (L+D)</span><strong>~1305 kcal</strong></div>
+          </div>
+        </article>
+        <article class="day-card">
+          <div class="media">
+            <img src="images/baingan-bharta.jpg" alt="Light veg night" loading="lazy" width="800" height="500" />
+            <span class="day-badge">Sun</span>
+          </div>
+          <div class="day-body">
+            <div class="meal">
+              <div class="meal-icon" aria-hidden="true">🌞</div>
+              <div>
+                <div class="meal-label">Lunch</div>
+                <div class="meal-title">Paneer cubes + yogurt + salad + leftover sabzi</div>
+                <div class="meal-meta"><span class="meta-pill kcal">520 kcal</span><span class="meta-pill grams">~460 g plate</span></div>
+                <div class="note-est">100 g paneer · 200 g yogurt · 100 g salad · 80 g sabzi</div>
+              </div>
+            </div>
+            <div class="meal">
+              <div class="meal-icon" aria-hidden="true">🌙</div>
+              <div>
+                <div class="meal-label">Dinner</div>
+                <div class="meal-title">Light arhar dal + bharta + yogurt</div>
+                <div class="meal-meta"><span class="meta-pill kcal">450 kcal</span><span class="meta-pill grams">~500 g plate</span></div>
+                <div class="note-est">250 g dal · 120 g bharta · 150 g yogurt</div>
+              </div>
+            </div>
+            <div class="day-total"><span>Day total (L+D)</span><strong>~970 kcal</strong></div>
+          </div>
+        </article>
+      </div>
+      <div class="snack-strip" aria-label="Snacks">
+        <span class="chip">🥜 Roasted chana<span class="chip-meta">30 g · ~110 kcal</span></span>
+        <span class="chip">🥣 Greek yogurt<span class="chip-meta">150 g · ~130 kcal</span></span>
+        <span class="chip">🥒 Cucumber + yogurt<span class="chip-meta">200 g · ~90 kcal</span></span>
+      </div>
+      <p class="note-est" style="margin-top:0.85rem;">Snack kcal are per single serving. Breakfast (~320–450 kcal) is extra each day.</p>
+    </div>
+  </section>
+
+  <section id="recipes">
+    <div class="wide">
+      <div class="section-head wrap" style="width: min(720px, 100%); margin-inline: auto; margin-bottom: 1.25rem;">
+        <h2>Core recipes</h2>
+        <p>Batch on Sunday. Exact mix amounts below — scale with a kitchen scale when you can.</p>
+      </div>
+      <div class="recipes">
+        <article class="recipe">
+          <div class="media">
+            <img src="images/bhindi-masala.jpg" alt="Bhindi masala" loading="lazy" width="800" height="600" />
+          </div>
+          <div class="recipe-body">
+            <h3>Bhindi Masala</h3>
+            <div class="servings">6 sides · ~900 g batch</div>
+            <div class="recipe-macros">
+              <span class="meta-pill kcal">~120 kcal / serving</span>
+              <span class="meta-pill grams">~150 g cooked</span>
+            </div>
+            <div class="ing-block">
+              <h4>In the pan</h4>
+              <ul class="ing-list">
+                <li><span class="amt">500 g</span> bhindi (okra), washed, fully dried, 1.5 cm slices</li>
+                <li><span class="amt">3 tbsp</span> oil (bhindi needs a little more so it doesn’t slime)</li>
+                <li><span class="amt">1 large</span> onion, sliced (~200 g)</li>
+                <li><span class="amt">2 medium</span> tomatoes, chopped (~250 g)</li>
+                <li><span class="amt">1 tbsp</span> ginger-garlic paste</li>
+                <li><span class="amt">1–2</span> green chilies, slit</li>
+                <li><span class="amt">½ tsp</span> turmeric</li>
+                <li><span class="amt">1 tsp</span> cumin powder</li>
+                <li><span class="amt">1 tsp</span> coriander powder</li>
+                <li><span class="amt">¾ tsp</span> amchur or chaat masala</li>
+                <li><span class="amt">¾–1 tsp</span> salt</li>
+                <li><span class="amt">½ tsp</span> garam masala</li>
+              </ul>
+            </div>
+            <div class="ing-block">
+              <h4>Method</h4>
+              <ol class="method-list">
+              <li>Pat bhindi bone-dry. Heat 2 tbsp oil in a wide pan; sauté bhindi on medium-high 8–10 min until edges brown and stickiness goes. Remove.</li>
+              <li>Add 1 tbsp oil. Onion 5 min → ginger-garlic + chili 1 min → tomato + all powders except garam masala. Cook 4–5 min until soft.</li>
+              <li>Return bhindi; toss 3–4 min. Finish garam masala. Portion ~150 g. Best slightly re-crisped when reheating.</li>
+              </ol>
+            </div>
+            <p class="note-est">Dry-ish North Indian bhindi — no coconut. Dry the okra well or it turns slimy.</p>
+          </div>
+        </article>
+        <article class="recipe">
+          <div class="media">
+            <img src="images/baingan-bharta.jpg" alt="Baingan bharta" loading="lazy" width="800" height="600" />
+          </div>
+          <div class="recipe-body">
+            <h3>Baingan Bharta</h3>
+            <div class="servings">6 servings · ~1.2 kg batch</div>
+            <div class="recipe-macros">
+              <span class="meta-pill kcal">~140 kcal / serving</span>
+              <span class="meta-pill grams">~200 g cooked</span>
+            </div>
+            <div class="ing-block">
+              <h4>Eggplant</h4>
+              <ul class="ing-list">
+                <li><span class="amt">1 kg</span> large baingan (2–3 big), for roasting</li>
+                <li><span class="amt">1 tsp</span> oil to rub skins</li>
+              </ul>
+            </div>
+            <div class="ing-block">
+              <h4>Masala</h4>
+              <ul class="ing-list">
+                <li><span class="amt">2 tbsp</span> oil</li>
+                <li><span class="amt">1 large</span> onion, finely chopped (~200 g)</li>
+                <li><span class="amt">1 tbsp</span> ginger-garlic paste</li>
+                <li><span class="amt">2 medium</span> tomatoes, chopped (~250 g)</li>
+                <li><span class="amt">1–2</span> green chilies, chopped</li>
+                <li><span class="amt">½ tsp</span> turmeric</li>
+                <li><span class="amt">1 tsp</span> cumin powder</li>
+                <li><span class="amt">1 tsp</span> coriander powder</li>
+                <li><span class="amt">¾–1 tsp</span> salt</li>
+                <li><span class="amt">½ tsp</span> garam masala</li>
+                <li><span class="amt">2 tbsp</span> chopped cilantro</li>
+              </ul>
+            </div>
+            <div class="ing-block">
+              <h4>Method</h4>
+              <ol class="method-list">
+              <li>Rub baingan with oil; roast over open flame or 220°C oven 35–45 min until collapsed and smoky. Cool, peel, mash flesh (~600–700 g mash).</li>
+              <li>Heat oil. Onion 6 min golden → ginger-garlic + chili 1 min → tomato + powders 5 min until jammy.</li>
+              <li>Add mashed baingan + salt. Cook 8–10 min on medium, stirring so it dries slightly and picks up smoky flavor.</li>
+              <li>Garam masala + cilantro. Portion ~200 g. Pair with dal or paneer for protein.</li>
+              </ol>
+            </div>
+            <p class="note-est">Low calorie volume veg. Protein comes from the dal/paneer/yogurt you serve with it.</p>
+          </div>
+        </article>
+        <article class="recipe">
+          <div class="media">
+            <img src="images/kadai-paneer.jpg" alt="Kadai paneer" loading="lazy" width="800" height="600" />
+          </div>
+          <div class="recipe-body">
+            <h3>Kadai Paneer</h3>
+            <div class="servings">6 servings · ~1.7 kg batch</div>
+            <div class="recipe-macros">
+              <span class="meta-pill kcal">~400 kcal / serving</span>
+              <span class="meta-pill grams">~280 g cooked</span>
+            </div>
+            <div class="ing-block">
+              <h4>Kadai masala (coarsely crush)</h4>
+              <ul class="ing-list">
+                <li><span class="amt">1 tbsp</span> coriander seeds</li>
+                <li><span class="amt">1 tsp</span> cumin seeds</li>
+                <li><span class="amt">2</span> dry red chilies</li>
+              </ul>
+            </div>
+            <div class="ing-block">
+              <h4>Gravy + veg</h4>
+              <ul class="ing-list">
+                <li><span class="amt">3 tbsp</span> oil</li>
+                <li><span class="amt">2 large</span> onions — 1 chopped for gravy (~200 g), 1 in petals (~200 g)</li>
+                <li><span class="amt">2</span> capsicums / bell peppers, 2 cm squares (~300 g) — no mushrooms</li>
+                <li><span class="amt">1 tbsp</span> ginger-garlic paste</li>
+                <li><span class="amt">3 medium</span> tomatoes, puréed (~400 g)</li>
+                <li><span class="amt">1 tsp</span> turmeric</li>
+                <li><span class="amt">1 tsp</span> Kashmiri chili powder</li>
+                <li><span class="amt">1–1½ tsp</span> salt</li>
+                <li><span class="amt">120 ml</span> water (½ cup)</li>
+                <li><span class="amt">1 tsp</span> kasuri methi, crushed</li>
+                <li><span class="amt">½ tsp</span> garam masala</li>
+              </ul>
+            </div>
+            <div class="ing-block">
+              <h4>Paneer</h4>
+              <ul class="ing-list">
+                <li><span class="amt">400 g</span> paneer, 2 cm cubes</li>
+              </ul>
+            </div>
+            <div class="ing-block">
+              <h4>Method</h4>
+              <ol class="method-list">
+              <li>Dry-roast coriander, cumin, red chili 1–2 min; crush coarse (mortar or pulse).</li>
+              <li>Heat oil. Cook chopped onion 7 min golden → ginger-garlic 1 min → tomato purée + turmeric + chili powder 8 min until thick.</li>
+              <li>Add crushed kadai masala + ½ cup water; simmer 2 min.</li>
+              <li>In another pan or same wide kadai: flash onion petals + capsicum 3–4 min on high (still crisp). Add to gravy.</li>
+              <li>Add paneer, salt, kasuri methi, garam masala. Simmer gently 4–5 min. Portion ~280 g (~65 g paneer).</li>
+              </ol>
+            </div>
+            <p class="note-est">Capsicum only — no mushrooms. ~400 kcal per 280 g serving.</p>
+          </div>
+        </article>
+        <article class="recipe">
+          <div class="media">
+            <img src="images/chana-masala.jpg" alt="Chole" loading="lazy" width="800" height="600" />
+          </div>
+          <div class="recipe-body">
+            <h3>Punjabi Chole</h3>
+            <div class="servings">6 servings · ~1.5 kg batch</div>
+            <div class="recipe-macros">
+              <span class="meta-pill kcal">~300 kcal / serving</span>
+              <span class="meta-pill grams">~250 g cooked</span>
+            </div>
+            <div class="ing-block">
+              <h4>Chickpeas</h4>
+              <ul class="ing-list">
+                <li><span class="amt">450 g</span> dry kabuli chana, soaked 8 hrs (or 3 cans drained)</li>
+                <li><span class="amt">1</span> tea bag or 1 tsp chole masala in cook water for color (optional)</li>
+                <li><span class="amt">1 tsp</span> salt</li>
+              </ul>
+            </div>
+            <div class="ing-block">
+              <h4>Masala</h4>
+              <ul class="ing-list">
+                <li><span class="amt">3 tbsp</span> oil</li>
+                <li><span class="amt">2 large</span> onions, finely chopped (~400 g)</li>
+                <li><span class="amt">1 tbsp</span> ginger-garlic paste</li>
+                <li><span class="amt">3 medium</span> tomatoes (~400 g)</li>
+                <li><span class="amt">2 tsp</span> cumin powder</li>
+                <li><span class="amt">2 tsp</span> coriander powder</li>
+                <li><span class="amt">1 tsp</span> turmeric</li>
+                <li><span class="amt">1–2 tsp</span> chole masala</li>
+                <li><span class="amt">1 tsp</span> amchur or anardana powder</li>
+                <li><span class="amt">1–1½ tsp</span> salt</li>
+                <li><span class="amt">240 ml</span> water (1 cup)</li>
+                <li><span class="amt">1-inch</span> ginger julienne to finish (optional)</li>
+              </ul>
+            </div>
+            <div class="ing-block">
+              <h4>Method</h4>
+              <ol class="method-list">
+              <li>Pressure-cook soaked chana until soft; keep 1 cup liquid.</li>
+              <li>Golden onions → ginger-garlic → tomato → all powders 30 sec.</li>
+              <li>Add chana + water/liquid. Simmer 15–20 min; mash a few. Finish amchur + ginger. Portion ~250 g.</li>
+              </ol>
+            </div>
+            <p class="note-est">Same protein role as Week 1 chana — darker Punjabi spice profile.</p>
+          </div>
+        </article>
+        <article class="recipe">
+          <div class="media">
+            <img src="images/moong-tadka.jpg" alt="Arhar dal tadka" loading="lazy" width="800" height="600" />
+          </div>
+          <div class="recipe-body">
+            <h3>Arhar Dal Tadka</h3>
+            <div class="servings">7 servings · ~1.75 kg batch</div>
+            <div class="recipe-macros">
+              <span class="meta-pill kcal">~220 kcal / serving</span>
+              <span class="meta-pill grams">~250 g cooked</span>
+            </div>
+            <div class="ing-block">
+              <h4>Dal</h4>
+              <ul class="ing-list">
+                <li><span class="amt">400 g</span> arhar / toor dal (about 2 cups)</li>
+                <li><span class="amt">1.2 L</span> water (5 cups)</li>
+                <li><span class="amt">1 tsp</span> turmeric</li>
+                <li><span class="amt">1½ tsp</span> salt</li>
+                <li><span class="amt">1 small</span> tomato, chopped (optional in cooker)</li>
+              </ul>
+            </div>
+            <div class="ing-block">
+              <h4>Tadka</h4>
+              <ul class="ing-list">
+                <li><span class="amt">2 tbsp</span> ghee or oil</li>
+                <li><span class="amt">1½ tsp</span> cumin seeds</li>
+                <li><span class="amt">1 pinch</span> hing (optional)</li>
+                <li><span class="amt">4</span> garlic cloves, sliced</li>
+                <li><span class="amt">1 medium</span> onion, finely chopped (~150 g)</li>
+                <li><span class="amt">1–2</span> dry red chilies or green chili</li>
+                <li><span class="amt">½ tsp</span> red chili powder (off heat, optional)</li>
+              </ul>
+            </div>
+            <div class="ing-block">
+              <h4>Method</h4>
+              <ol class="method-list">
+              <li>Rinse dal. Pressure-cook with water, turmeric, salt (+ tomato) until soft; whisk thick-creamy.</li>
+              <li>Tadka: ghee → cumin → chili → garlic golden → onion 4 min. Optional chili powder off heat.</li>
+              <li>Pour over dal; simmer 3 min. Portion ~250 g.</li>
+              </ol>
+            </div>
+            <p class="note-est">Classic North Indian arhar — not sambar. Keep thick for meal prep.</p>
+          </div>
+        </article>
+        <article class="recipe">
+          <div class="media">
+            <img src="images/jeera-aloo.jpg" alt="Jeera aloo" loading="lazy" width="800" height="600" />
+          </div>
+          <div class="recipe-body">
+            <h3>Jeera Aloo</h3>
+            <div class="servings">5 sides · ~750 g batch</div>
+            <div class="recipe-macros">
+              <span class="meta-pill kcal">~140 kcal / serving</span>
+              <span class="meta-pill grams">~150 g cooked</span>
+            </div>
+            <div class="ing-block">
+              <h4>In the pan</h4>
+              <ul class="ing-list">
+                <li><span class="amt">700 g</span> potatoes, boiled, peeled, 2 cm cubes</li>
+                <li><span class="amt">2 tbsp</span> oil</li>
+                <li><span class="amt">1½ tsp</span> cumin seeds</li>
+                <li><span class="amt">2</span> green chilies, slit</li>
+                <li><span class="amt">½ tsp</span> turmeric</li>
+                <li><span class="amt">¾ tsp</span> amchur</li>
+                <li><span class="amt">¾–1 tsp</span> salt</li>
+                <li><span class="amt">½ tsp</span> coriander powder</li>
+                <li><span class="amt">2 tbsp</span> cilantro, chopped</li>
+              </ul>
+            </div>
+            <div class="ing-block">
+              <h4>Method</h4>
+              <ol class="method-list">
+              <li>Boil potatoes until just done; cube when cool enough to handle.</li>
+              <li>Heat oil; cumin until it crackles. Chili 10 sec. Add potatoes + turmeric + salt + coriander.</li>
+              <li>Toss on medium-high 5–7 min until edges crisp slightly. Amchur + cilantro. Portion ~150 g.</li>
+              </ol>
+            </div>
+            <p class="note-est">Simple North Indian side. Great with dal + yogurt when you want a break from bhindi.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="breakfast">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Grab-and-go breakfasts</h2>
+        <p>Pick one every morning. Weights are as prepared in the jar/bowl.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="prep">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Sunday prep</h2>
+        <p>Aim for ~2–2.5 hours. Roast baingan first (hands-off); cook bhindi last or Mon night so it stays crisp.</p>
+      </div>
+      <div class="prep-flow">
+        <div class="prep-phase">
+          <div class="prep-phase-head">
+            <h3>Saturday night</h3>
+            <span class="time">~5 min</span>
+          </div>
+          <ol class="prep-list">
+          <li><strong>Soak</strong> 450 g kabuli chana for chole (8 hrs), or plan canned.</li>
+          <li>Wash <strong>bhindi</strong> and air-dry completely overnight on a towel (critical — wet bhindi = slime).</li>
+          </ol>
+        </div>
+        <div class="prep-phase">
+          <div class="prep-phase-head">
+            <h3>Phase 1 — Oven + cooker at once</h3>
+            <span class="time">~15 min start · 35–45 min unattended</span>
+          </div>
+          <ol class="prep-list">
+          <li>Rub <strong>1 kg baingan</strong> with oil; roast at 220°C (or open flame later). Set a timer.</li>
+          <li>Pressure-cook <strong>chana</strong> for chole and start <strong>arhar dal</strong> (400 g + water + turmeric + salt).</li>
+          <li>Start <strong>quinoa/rice</strong> and boil <strong>potatoes</strong> for jeera aloo.</li>
+          <li><em>While those go → chop everything for Phase 2.</em></li>
+          </ol>
+        </div>
+        <div class="prep-phase">
+          <div class="prep-phase-head">
+            <h3>Phase 2 — Chop + two bases</h3>
+            <span class="time">~25 min</span>
+          </div>
+          <ol class="prep-list">
+          <li>Chop: onions, tomatoes, capsicum (no mushrooms), ginger-garlic, chilies. Cube <strong>400–500 g paneer</strong>.</li>
+          <li>Make <strong>chole masala base</strong> (onions deep golden — worth the time).</li>
+          <li>Dry-roast and crush <strong>kadai spices</strong> (coriander + cumin + dry chili).</li>
+          <li>When baingan is collapsed: peel, mash, fridge until gravy is ready.</li>
+          </ol>
+        </div>
+        <div class="prep-phase">
+          <div class="prep-phase-head">
+            <h3>Phase 3 — Finish proteins & dals</h3>
+            <span class="time">~40 min</span>
+          </div>
+          <ol class="prep-list">
+          <li>Simmer <strong>chole</strong> 15–20 min. <strong>~250 g portions.</strong></li>
+          <li>Tadka on <strong>arhar dal</strong>; keep thick. <strong>~250 g portions.</strong></li>
+          <li><strong>Kadai paneer:</strong> gravy → flash capsicum + onion petals → paneer 4–5 min. <strong>~280 g portions.</strong></li>
+          <li><strong>Baingan bharta:</strong> onion-tomato → mash → cook dry 8–10 min. <strong>~200 g portions.</strong></li>
+          <li><strong>Bhindi:</strong> only if fully dry — sauté high heat then masala. <em>Or slice Sunday and cook Mon dinner in 15 min for better texture.</em></li>
+          <li>Optional now: <strong>jeera aloo</strong> from boiled potatoes (5–7 min).</li>
+          </ol>
+        </div>
+        <div class="prep-phase">
+          <div class="prep-phase-head">
+            <h3>Phase 4 — Portion</h3>
+            <span class="time">~10 min</span>
+          </div>
+          <ol class="prep-list">
+          <li>Cool → box curries/sabzis separately from grain so nothing steams soggy.</li>
+          <li>Yogurt cups 150–200 g. Salad veg for 2–3 days only.</li>
+          </ol>
+        </div>
+      </div>
+      <p class="prep-note"><strong>Efficiency rule:</strong> Baingan in the oven + beans/dal on the stove is free parallel time. Bhindi is the one dish that can wait until Monday — everything else freezes/fridges well.</p>
+    </div>
+  </section>
+
+  <section id="tips">
+    <div class="wrap">
+      <div class="section-head"><h2>Daily tips</h2></div>
+      <div class="tips">
+        <div class="tip">
+          <strong>Protein rule</strong>
+          Sabzi alone is light — always add dal, chole, paneer, or 150 g+ yogurt.
+        </div>
+        <div class="tip">
+          <strong>Bhindi</strong>
+          Must be dry before cutting. Reheat in a pan, not soupy microwave.
+        </div>
+        <div class="tip">
+          <strong>Bharta</strong>
+          Open-flame roast = best smoke. Oven works if you’re batching.
+        </div>
+        <div class="tip">
+          <strong>No mushrooms</strong>
+          Kadai uses only capsicum + onion petals.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>Week 3 · North Indian · no mushrooms · estimates ±15%</footer>
+  <nav class="bottom-nav" aria-label="Quick jump">
+    <a href="#grocery">
+      <svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+      List
+    </a>
+    <a href="#menu">
+      <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+      Menu
+    </a>
+    <a href="#recipes">
+      <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+      Recipes
+    </a>
+    <a href="#breakfast">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+      Breakfast
+    </a>
+  </nav>
+  <script src="grocery.js"></script>
+</body>
+</html>

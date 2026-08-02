@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#1a3c34" />
+  <meta name="description" content="Week 4 North Indian: dal makhani, lauki chana dal, methi paneer, aloo matar, aloo gobi." />
+  <title>Week 4 · Punjabi Comfort · Meal Prep</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero" data-week="comfort">
+    <div class="hero-inner">
+      <a class="back-weeks" href="index.html">← All weekly menus</a>
+      <div class="eyebrow">✦ Week 4 · Punjabi Comfort</div>
+      <h1>Dal Makhani, Methi Paneer &amp; Aloo</h1>
+      <p>Cozy North Indian rotation — dal makhani, lauki chana dal, methi paneer, aloo matar, and aloo gobi. No mushrooms.</p>
+      <div class="hero-tags">
+        <span class="tag">7 days</span>
+        <span class="tag">North Indian</span>
+        <span class="tag">kcal + grams</span>
+      </div>
+    </div>
+  </header>
+
+  <nav class="desktop-nav wide" aria-label="Sections">
+    <a href="index.html">Weeks</a>
+    <a href="#grocery">Grocery</a>
+    <a href="#menu">Menu</a>
+    <a href="#recipes">Recipes</a>
+    <a href="#breakfast">Breakfast</a>
+    <a href="#prep">Sunday prep</a>
+  </nav>
+
+  <section id="grocery" data-storage-key="meal-prep-comfort-v1">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Grocery list</h2>
+        <p>Short checklist — tap to check off. Saved on this phone.</p>
+      </div>
+      <div class="grocery-toolbar">
+        <span class="progress" id="progress" aria-live="polite">0 / 0 done</span>
+        <button type="button" class="btn-ghost" id="clear-checks">Clear all</button>
+      </div>
+      <div class="grocery-groups">
+        <div class="grocery-card">
+          <h3>Produce</h3>
+          <ul class="check-list">
+            <li>
+              <label>
+                <input type="checkbox" data-key="p1" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Onions<small>7–8</small></span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-key="p2" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Tomatoes<small>8–10</small></span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-key="p3" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Lauki (bottle gourd)<small>1 medium ~500 g</small></span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-key="p4" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Cauliflower<small>1 medium</small></span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-key="p5" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Potatoes<small>1 kg</small></span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-key="p6" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Green peas<small>300 g frozen is fine</small></span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-key="p7" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Fresh methi leaves<small>optional if not using kasuri methi</small></span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-key="p8" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Ginger + garlic + green chilies + cilantro</span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-key="p9" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Cucumber / salad veg + fruit for the week</span>
+              </label>
+            </li>
+          </ul>
+        </div>
+        <div class="grocery-card">
+          <h3>Dairy &amp; protein</h3>
+          <ul class="check-list">
+            <li>
+              <label>
+                <input type="checkbox" data-key="d1" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Paneer<small>500–600 g</small></span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-key="d2" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Greek yogurt / hung curd<small>1.5–2 kg</small></span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-key="d3" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Cream or extra yogurt<small>small for dal makhani finish</small></span>
+              </label>
+            </li>
+          </ul>
+        </div>
+        <div class="grocery-card">
+          <h3>Legumes &amp; grains</h3>
+          <ul class="check-list">
+            <li>
+              <label>
+                <input type="checkbox" data-key="l1" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Whole black urad dal<small>300 g</small></span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-key="l2" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Rajma<small>50 g (for dal makhani)</small></span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-key="l3" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Chana dal<small>300–350 g</small></span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-key="l4" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Quinoa or brown rice<small>1 kg</small></span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-key="l5" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Rolled oats<small>500 g</small></span>
+              </label>
+            </li>
+          </ul>
+        </div>
+        <div class="grocery-card">
+          <h3>Snacks &amp; pantry</h3>
+          <ul class="check-list">
+            <li>
+              <label>
+                <input type="checkbox" data-key="s1" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Roasted chana or peanuts<small>200–250 g</small></span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-key="s2" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Kasuri methi<small>1 small pack</small></span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-key="s3" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Spices<small>cumin, coriander, turmeric, garam masala, amchur, chili, salt, ghee/oil</small></span>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="menu">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>7-day menu</h2>
+        <p>Lunch + dinner. Richer dals this week — keep yogurt generous and sabzi portions honest on the scale. Calorie and weight figures are estimates for the plated portions shown. No mushrooms.</p>
+      </div>
+      <div class="days">
+        <article class="day-card">
+          <div class="media">
+            <img src="images/dal-makhani.jpg" alt="Dal makhani" loading="lazy" width="800" height="500" />
+            <span class="day-badge">Mon</span>
+          </div>
+          <div class="day-body">
+            <div class="meal">
+              <div class="meal-icon" aria-hidden="true">🌞</div>
+              <div>
+                <div class="meal-label">Lunch</div>
+                <div class="meal-title">Dal makhani + quinoa + salad + yogurt</div>
+                <div class="meal-meta"><span class="meta-pill kcal">665 kcal</span><span class="meta-pill grams">~630 g plate</span></div>
+                <div class="note-est">250 g dal makhani · 150 g quinoa · 80 g salad · 150 g yogurt</div>
+              </div>
+            </div>
+            <div class="meal">
+              <div class="meal-icon" aria-hidden="true">🌙</div>
+              <div>
+                <div class="meal-label">Dinner</div>
+                <div class="meal-title">Lauki chana dal + aloo gobi + quinoa</div>
+                <div class="meal-meta"><span class="meta-pill kcal">550 kcal</span><span class="meta-pill grams">~560 g plate</span></div>
+                <div class="note-est">250 g lauki dal · 150 g aloo gobi · 150 g quinoa</div>
+              </div>
+            </div>
+            <div class="day-total"><span>Day total (L+D)</span><strong>~1215 kcal</strong></div>
+          </div>
+        </article>
+        <article class="day-card">
+          <div class="media">
+            <img src="images/aloo-matar.jpg" alt="Aloo matar" loading="lazy" width="800" height="500" />
+            <span class="day-badge">Tue</span>
+          </div>
+          <div class="day-body">
+            <div class="meal">
+              <div class="meal-icon" aria-hidden="true">🌞</div>
+              <div>
+                <div class="meal-label">Lunch</div>
+                <div class="meal-title">Lauki chana dal + quinoa + raita</div>
+                <div class="meal-meta"><span class="meta-pill kcal">510 kcal</span><span class="meta-pill grams">~580 g plate</span></div>
+                <div class="note-est">250 g dal · 150 g quinoa · 120 g raita</div>
+              </div>
+            </div>
+            <div class="meal">
+              <div class="meal-icon" aria-hidden="true">🌙</div>
+              <div>
+                <div class="meal-label">Dinner</div>
+                <div class="meal-title">Methi paneer + aloo matar + salad</div>
+                <div class="meal-meta"><span class="meta-pill kcal">580 kcal</span><span class="meta-pill grams">~540 g plate</span></div>
+                <div class="note-est">280 g methi paneer · 150 g aloo matar · 80 g salad</div>
+              </div>
+            </div>
+            <div class="day-total"><span>Day total (L+D)</span><strong>~1090 kcal</strong></div>
+          </div>
+        </article>
+        <article class="day-card">
+          <div class="media">
+            <img src="images/methi-paneer.jpg" alt="Methi paneer" loading="lazy" width="800" height="500" />
+            <span class="day-badge">Wed</span>
+          </div>
+          <div class="day-body">
+            <div class="meal">
+              <div class="meal-icon" aria-hidden="true">🌞</div>
+              <div>
+                <div class="meal-label">Lunch</div>
+                <div class="meal-title">Dal makhani + quinoa + yogurt</div>
+                <div class="meal-meta"><span class="meta-pill kcal">650 kcal</span><span class="meta-pill grams">~600 g plate</span></div>
+                <div class="note-est">250 g dal makhani · 150 g quinoa · 150 g yogurt</div>
+              </div>
+            </div>
+            <div class="meal">
+              <div class="meal-icon" aria-hidden="true">🌙</div>
+              <div>
+                <div class="meal-label">Dinner</div>
+                <div class="meal-title">Aloo gobi + lauki dal + yogurt</div>
+                <div class="meal-meta"><span class="meta-pill kcal">490 kcal</span><span class="meta-pill grams">~550 g plate</span></div>
+                <div class="note-est">150 g aloo gobi · 250 g dal · 150 g yogurt</div>
+              </div>
+            </div>
+            <div class="day-total"><span>Day total (L+D)</span><strong>~1140 kcal</strong></div>
+          </div>
+        </article>
+        <article class="day-card">
+          <div class="media">
+            <img src="images/lauki-chana-dal.jpg" alt="Lauki chana dal" loading="lazy" width="800" height="500" />
+            <span class="day-badge">Thu</span>
+          </div>
+          <div class="day-body">
+            <div class="meal">
+              <div class="meal-icon" aria-hidden="true">🌞</div>
+              <div>
+                <div class="meal-label">Lunch</div>
+                <div class="meal-title">Lauki chana dal + aloo matar + quinoa</div>
+                <div class="meal-meta"><span class="meta-pill kcal">570 kcal</span><span class="meta-pill grams">~580 g plate</span></div>
+                <div class="note-est">250 g dal · 150 g aloo matar · 150 g quinoa</div>
+              </div>
+            </div>
+            <div class="meal">
+              <div class="meal-icon" aria-hidden="true">🌙</div>
+              <div>
+                <div class="meal-label">Dinner</div>
+                <div class="meal-title">Methi paneer + salad + big yogurt</div>
+                <div class="meal-meta"><span class="meta-pill kcal">590 kcal</span><span class="meta-pill grams">~520 g plate</span></div>
+                <div class="note-est">280 g methi paneer · 100 g salad · 200 g yogurt</div>
+              </div>
+            </div>
+            <div class="day-total"><span>Day total (L+D)</span><strong>~1160 kcal</strong></div>
+          </div>
+        </article>
+        <article class="day-card">
+          <div class="media">
+            <img src="images/aloo-gobi.jpg" alt="Aloo gobi" loading="lazy" width="800" height="500" />
+            <span class="day-badge">Fri</span>
+          </div>
+          <div class="day-body">
+            <div class="meal">
+              <div class="meal-icon" aria-hidden="true">🌞</div>
+              <div>
+                <div class="meal-label">Lunch</div>
+                <div class="meal-title">Dal makhani bowl + extra yogurt + salad</div>
+                <div class="meal-meta"><span class="meta-pill kcal">695 kcal</span><span class="meta-pill grams">~650 g plate</span></div>
+                <div class="note-est">250 g dal · 150 g grain · 200 g yogurt · 80 g salad</div>
+              </div>
+            </div>
+            <div class="meal">
+              <div class="meal-icon" aria-hidden="true">🌙</div>
+              <div>
+                <div class="meal-label">Dinner</div>
+                <div class="meal-title">Aloo gobi + methi paneer leftover + dal</div>
+                <div class="meal-meta"><span class="meta-pill kcal">600 kcal</span><span class="meta-pill grams">~560 g plate</span></div>
+                <div class="note-est">150 g aloo gobi · 200 g paneer curry · 180 g dal</div>
+              </div>
+            </div>
+            <div class="day-total"><span>Day total (L+D)</span><strong>~1295 kcal</strong></div>
+          </div>
+        </article>
+        <article class="day-card">
+          <div class="media">
+            <img src="images/dal-makhani.jpg" alt="Comfort bowl" loading="lazy" width="800" height="500" />
+            <span class="day-badge">Sat</span>
+          </div>
+          <div class="day-body">
+            <div class="meal">
+              <div class="meal-icon" aria-hidden="true">🌞</div>
+              <div>
+                <div class="meal-label">Lunch</div>
+                <div class="meal-title">Leftover dal makhani / lauki dal + yogurt + salad</div>
+                <div class="meal-meta"><span class="meta-pill kcal">675 kcal</span><span class="meta-pill grams">~640 g plate</span></div>
+                <div class="note-est">250 g dal · 150 g grain · 200 g yogurt · 80 g salad</div>
+              </div>
+            </div>
+            <div class="meal">
+              <div class="meal-icon" aria-hidden="true">🌙</div>
+              <div>
+                <div class="meal-label">Dinner</div>
+                <div class="meal-title">Methi paneer + aloo matar + quinoa</div>
+                <div class="meal-meta"><span class="meta-pill kcal">710 kcal</span><span class="meta-pill grams">~580 g plate</span></div>
+                <div class="note-est">250 g methi paneer · 140 g aloo matar · 150 g quinoa</div>
+              </div>
+            </div>
+            <div class="day-total"><span>Day total (L+D)</span><strong>~1385 kcal</strong></div>
+          </div>
+        </article>
+        <article class="day-card">
+          <div class="media">
+            <img src="images/aloo-matar.jpg" alt="Light comfort" loading="lazy" width="800" height="500" />
+            <span class="day-badge">Sun</span>
+          </div>
+          <div class="day-body">
+            <div class="meal">
+              <div class="meal-icon" aria-hidden="true">🌞</div>
+              <div>
+                <div class="meal-label">Lunch</div>
+                <div class="meal-title">Paneer + yogurt + salad + leftover sabzi</div>
+                <div class="meal-meta"><span class="meta-pill kcal">540 kcal</span><span class="meta-pill grams">~480 g plate</span></div>
+                <div class="note-est">100 g paneer · 200 g yogurt · 100 g salad · 100 g sabzi</div>
+              </div>
+            </div>
+            <div class="meal">
+              <div class="meal-icon" aria-hidden="true">🌙</div>
+              <div>
+                <div class="meal-label">Dinner</div>
+                <div class="meal-title">Light lauki dal + aloo gobi + yogurt</div>
+                <div class="meal-meta"><span class="meta-pill kcal">460 kcal</span><span class="meta-pill grams">~500 g plate</span></div>
+                <div class="note-est">250 g dal · 120 g aloo gobi · 150 g yogurt</div>
+              </div>
+            </div>
+            <div class="day-total"><span>Day total (L+D)</span><strong>~1000 kcal</strong></div>
+          </div>
+        </article>
+      </div>
+      <div class="snack-strip" aria-label="Snacks">
+        <span class="chip">🥜 Roasted chana<span class="chip-meta">30 g · ~110 kcal</span></span>
+        <span class="chip">🥣 Greek yogurt<span class="chip-meta">150 g · ~130 kcal</span></span>
+        <span class="chip">🥒 Cucumber + yogurt<span class="chip-meta">200 g · ~90 kcal</span></span>
+      </div>
+      <p class="note-est" style="margin-top:0.85rem;">Snack kcal are per single serving. Breakfast (~320–450 kcal) is extra each day.</p>
+    </div>
+  </section>
+
+  <section id="recipes">
+    <div class="wide">
+      <div class="section-head wrap" style="width: min(720px, 100%); margin-inline: auto; margin-bottom: 1.25rem;">
+        <h2>Core recipes</h2>
+        <p>Batch on Sunday. Exact mix amounts below — scale with a kitchen scale when you can.</p>
+      </div>
+      <div class="recipes">
+        <article class="recipe">
+          <div class="media">
+            <img src="images/dal-makhani.jpg" alt="Dal makhani" loading="lazy" width="800" height="600" />
+          </div>
+          <div class="recipe-body">
+            <h3>Dal Makhani (home-style)</h3>
+            <div class="servings">6 servings · ~1.6 kg batch</div>
+            <div class="recipe-macros">
+              <span class="meta-pill kcal">~340 kcal / serving</span>
+              <span class="meta-pill grams">~250 g cooked</span>
+            </div>
+            <div class="ing-block">
+              <h4>Beans (soak 8 hrs)</h4>
+              <ul class="ing-list">
+                <li><span class="amt">300 g</span> whole black urad dal</li>
+                <li><span class="amt">50 g</span> rajma</li>
+                <li><span class="amt">1.4 L</span> water for pressure-cooking</li>
+                <li><span class="amt">1 tsp</span> salt</li>
+              </ul>
+            </div>
+            <div class="ing-block">
+              <h4>Gravy</h4>
+              <ul class="ing-list">
+                <li><span class="amt">2 tbsp</span> ghee or oil + 1 tbsp butter</li>
+                <li><span class="amt">1 large</span> onion, finely chopped (~200 g)</li>
+                <li><span class="amt">1 tbsp</span> ginger-garlic paste</li>
+                <li><span class="amt">300 g</span> tomato purée (about 3 blended tomatoes)</li>
+                <li><span class="amt">1 tsp</span> cumin powder</li>
+                <li><span class="amt">1 tsp</span> coriander powder</li>
+                <li><span class="amt">1 tsp</span> Kashmiri chili powder</li>
+                <li><span class="amt">½ tsp</span> garam masala</li>
+                <li><span class="amt">1 tsp</span> salt (to taste)</li>
+                <li><span class="amt">60 ml</span> cream or 100 g Greek yogurt whisked (lighter option)</li>
+                <li><span class="amt">1 tsp</span> kasuri methi, crushed</li>
+              </ul>
+            </div>
+            <div class="ing-block">
+              <h4>Method</h4>
+              <ol class="method-list">
+              <li>Pressure-cook soaked urad + rajma with water and salt until very soft and creamy (often 40–50 min). Mash some against the pot.</li>
+              <li>Heat ghee/butter. Onion 8 min golden → ginger-garlic 1 min → tomato purée + powders 8–10 min until thick and oil shows.</li>
+              <li>Add cooked dal + a splash of water. Simmer low 20–30 min (longer = better), stirring so it doesn’t stick.</li>
+              <li>Stir cream or yogurt off heat; kasuri methi + garam masala. Portion ~250 g. Lighter than restaurant — still rich.</li>
+              </ol>
+            </div>
+            <p class="note-est">High-protein comfort. Yogurt instead of lots of cream keeps kcal nearer ~340/serving.</p>
+          </div>
+        </article>
+        <article class="recipe">
+          <div class="media">
+            <img src="images/lauki-chana-dal.jpg" alt="Lauki chana dal" loading="lazy" width="800" height="600" />
+          </div>
+          <div class="recipe-body">
+            <h3>Lauki Chana Dal</h3>
+            <div class="servings">7 servings · ~1.8 kg batch</div>
+            <div class="recipe-macros">
+              <span class="meta-pill kcal">~230 kcal / serving</span>
+              <span class="meta-pill grams">~250 g cooked</span>
+            </div>
+            <div class="ing-block">
+              <h4>Dal + lauki</h4>
+              <ul class="ing-list">
+                <li><span class="amt">300 g</span> chana dal (about 1½ cups), soaked 30 min</li>
+                <li><span class="amt">500 g</span> lauki (bottle gourd), peeled, 2 cm cubes</li>
+                <li><span class="amt">1 L</span> water (about 4 cups)</li>
+                <li><span class="amt">1 tsp</span> turmeric</li>
+                <li><span class="amt">1½ tsp</span> salt</li>
+                <li><span class="amt">1 medium</span> tomato, chopped</li>
+              </ul>
+            </div>
+            <div class="ing-block">
+              <h4>Tadka</h4>
+              <ul class="ing-list">
+                <li><span class="amt">2 tbsp</span> oil or ghee</li>
+                <li><span class="amt">1 tsp</span> cumin seeds</li>
+                <li><span class="amt">1 pinch</span> hing (optional)</li>
+                <li><span class="amt">1 tbsp</span> ginger, minced</li>
+                <li><span class="amt">1–2</span> green chilies</li>
+                <li><span class="amt">½ tsp</span> red chili powder (optional)</li>
+              </ul>
+            </div>
+            <div class="ing-block">
+              <h4>Method</h4>
+              <ol class="method-list">
+              <li>Drain chana dal. Pressure-cook with lauki, water, turmeric, salt, tomato until dal soft and lauki tender (3–4 whistles).</li>
+              <li>Whisk lightly — keep some texture. Adjust water for thick stew.</li>
+              <li>Tadka: oil → cumin → hing → ginger + chili. Pour over dal; simmer 3 min. Portion ~250 g.</li>
+              </ol>
+            </div>
+            <p class="note-est">Light, high-volume North Indian dal. Lauki keeps calories modest.</p>
+          </div>
+        </article>
+        <article class="recipe">
+          <div class="media">
+            <img src="images/methi-paneer.jpg" alt="Methi paneer" loading="lazy" width="800" height="600" />
+          </div>
+          <div class="recipe-body">
+            <h3>Methi Paneer</h3>
+            <div class="servings">6 servings · ~1.7 kg batch</div>
+            <div class="recipe-macros">
+              <span class="meta-pill kcal">~390 kcal / serving</span>
+              <span class="meta-pill grams">~280 g cooked</span>
+            </div>
+            <div class="ing-block">
+              <h4>Gravy</h4>
+              <ul class="ing-list">
+                <li><span class="amt">3 tbsp</span> oil</li>
+                <li><span class="amt">2 large</span> onions, sliced (~400 g)</li>
+                <li><span class="amt">1 tbsp</span> ginger-garlic paste</li>
+                <li><span class="amt">3 medium</span> tomatoes, puréed (~400 g)</li>
+                <li><span class="amt">1 tsp</span> turmeric</li>
+                <li><span class="amt">1½ tsp</span> cumin powder</li>
+                <li><span class="amt">2 tsp</span> coriander powder</li>
+                <li><span class="amt">1 tsp</span> garam masala</li>
+                <li><span class="amt">1–1½ tsp</span> salt</li>
+                <li><span class="amt">120 ml</span> water (½ cup)</li>
+                <li><span class="amt">3 tbsp</span> cream or 4 tbsp milk (optional)</li>
+              </ul>
+            </div>
+            <div class="ing-block">
+              <h4>Methi + paneer</h4>
+              <ul class="ing-list">
+                <li><span class="amt">30 g</span> kasuri methi (dried) — crush well; or 150 g fresh methi leaves, chopped</li>
+                <li><span class="amt">400 g</span> paneer, 2 cm cubes</li>
+              </ul>
+            </div>
+            <div class="ing-block">
+              <h4>Method</h4>
+              <ol class="method-list">
+              <li>If fresh methi: sauté chopped leaves 3–4 min in 1 tsp oil until aroma mellows; set aside. If kasuri: crush and keep ready.</li>
+              <li>Heat oil. Onions 8–10 min deep golden → ginger-garlic 1 min → tomato purée + powders 8 min until thick.</li>
+              <li>Add water + salt; simmer 2 min. Add methi; cook 2 min.</li>
+              <li>Add paneer (+ cream/milk). Gentle simmer 5 min. Portion ~280 g (~65 g paneer).</li>
+              </ol>
+            </div>
+            <p class="note-est">No mushrooms. Kasuri methi is pantry-friendly; fresh methi is brighter if in season.</p>
+          </div>
+        </article>
+        <article class="recipe">
+          <div class="media">
+            <img src="images/aloo-matar.jpg" alt="Aloo matar" loading="lazy" width="800" height="600" />
+          </div>
+          <div class="recipe-body">
+            <h3>Aloo Matar</h3>
+            <div class="servings">6 servings · ~1.5 kg batch</div>
+            <div class="recipe-macros">
+              <span class="meta-pill kcal">~160 kcal / serving</span>
+              <span class="meta-pill grams">~250 g cooked</span>
+            </div>
+            <div class="ing-block">
+              <h4>In the pan</h4>
+              <ul class="ing-list">
+                <li><span class="amt">500 g</span> potatoes, 2 cm cubes</li>
+                <li><span class="amt">300 g</span> green peas (fresh or frozen)</li>
+                <li><span class="amt">3 tbsp</span> oil</li>
+                <li><span class="amt">1 large</span> onion, chopped (~200 g)</li>
+                <li><span class="amt">1 tbsp</span> ginger-garlic paste</li>
+                <li><span class="amt">2 medium</span> tomatoes, chopped (~250 g)</li>
+                <li><span class="amt">1 tsp</span> cumin seeds</li>
+                <li><span class="amt">½ tsp</span> turmeric</li>
+                <li><span class="amt">1 tsp</span> cumin powder</li>
+                <li><span class="amt">1½ tsp</span> coriander powder</li>
+                <li><span class="amt">¾–1 tsp</span> salt</li>
+                <li><span class="amt">½ tsp</span> garam masala</li>
+                <li><span class="amt">240 ml</span> water (1 cup)</li>
+              </ul>
+            </div>
+            <div class="ing-block">
+              <h4>Method</h4>
+              <ol class="method-list">
+              <li>Heat oil; cumin 20 sec → onion 6 min → ginger-garlic 1 min → tomato + powders 5 min.</li>
+              <li>Add potatoes; stir 2 min. Add water + salt; cover 10–12 min until potatoes almost done.</li>
+              <li>Add peas; cook 5–6 min more. Garam masala. Portion ~250 g. Lighter sabzi — pair with dal/paneer.</li>
+              </ol>
+            </div>
+            <p class="note-est">~160 kcal per 250 g. Protein from the dal or paneer on the plate.</p>
+          </div>
+        </article>
+        <article class="recipe">
+          <div class="media">
+            <img src="images/aloo-gobi.jpg" alt="Aloo gobi" loading="lazy" width="800" height="600" />
+          </div>
+          <div class="recipe-body">
+            <h3>Aloo Gobi</h3>
+            <div class="servings">6 sides · ~1.2 kg batch</div>
+            <div class="recipe-macros">
+              <span class="meta-pill kcal">~140 kcal / serving</span>
+              <span class="meta-pill grams">~200 g cooked</span>
+            </div>
+            <div class="ing-block">
+              <h4>In the pan</h4>
+              <ul class="ing-list">
+                <li><span class="amt">500 g</span> cauliflower florets (medium)</li>
+                <li><span class="amt">300 g</span> potatoes, 2 cm cubes</li>
+                <li><span class="amt">3 tbsp</span> oil</li>
+                <li><span class="amt">1 tsp</span> cumin seeds</li>
+                <li><span class="amt">1 large</span> onion, sliced (~200 g) optional</li>
+                <li><span class="amt">1 tbsp</span> ginger, julienned</li>
+                <li><span class="amt">1–2</span> green chilies</li>
+                <li><span class="amt">½ tsp</span> turmeric</li>
+                <li><span class="amt">1 tsp</span> coriander powder</li>
+                <li><span class="amt">¾ tsp</span> amchur</li>
+                <li><span class="amt">1 tsp</span> salt</li>
+                <li><span class="amt">½ tsp</span> garam masala</li>
+                <li><span class="amt">2 tbsp</span> cilantro</li>
+              </ul>
+            </div>
+            <div class="ing-block">
+              <h4>Method</h4>
+              <ol class="method-list">
+              <li>Heat oil in a wide pan. Cumin → potato cubes 4–5 min to seal edges.</li>
+              <li>Add cauliflower, onion (if using), ginger, chili, turmeric, coriander, salt. Toss well.</li>
+              <li>Cover and cook on medium-low 12–15 min, stirring every few minutes — dry-ish, not steamed mush. Splash water only if sticking.</li>
+              <li>Amchur + garam masala + cilantro. Portion ~200 g.</li>
+              </ol>
+            </div>
+            <p class="note-est">Dry North Indian sabzi. No coconut, no mushrooms.</p>
+          </div>
+        </article>
+        <article class="recipe">
+          <div class="media">
+            <img src="images/jeera-aloo.jpg" alt="Jeera aloo" loading="lazy" width="800" height="600" />
+          </div>
+          <div class="recipe-body">
+            <h3>Jeera Aloo (optional side)</h3>
+            <div class="servings">4 sides if you need extra veg</div>
+            <div class="recipe-macros">
+              <span class="meta-pill kcal">~140 kcal / serving</span>
+              <span class="meta-pill grams">~150 g cooked</span>
+            </div>
+            <div class="ing-block">
+              <h4>Quick side</h4>
+              <ul class="ing-list">
+                <li><span class="amt">500 g</span> boiled potatoes, cubed</li>
+                <li><span class="amt">1½ tbsp</span> oil</li>
+                <li><span class="amt">1½ tsp</span> cumin seeds</li>
+                <li><span class="amt">½ tsp</span> turmeric</li>
+                <li><span class="amt">¾ tsp</span> salt</li>
+                <li><span class="amt">½ tsp</span> amchur</li>
+              </ul>
+            </div>
+            <div class="ing-block">
+              <h4>Method</h4>
+              <ol class="method-list">
+              <li>Cumin in hot oil → potatoes + turmeric + salt. Toss 5–7 min. Amchur. Portion ~150 g.</li>
+              </ol>
+            </div>
+            <p class="note-est">Emergency 10-minute side from boiled potatoes.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="breakfast">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Grab-and-go breakfasts</h2>
+        <p>Pick one every morning. Weights are as prepared in the jar/bowl.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="prep">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Sunday prep</h2>
+        <p>Aim for ~2.5 hours (dal makhani likes a longer simmer). Soak urad Saturday night — non-negotiable for creamy dal.</p>
+      </div>
+      <div class="prep-flow">
+        <div class="prep-phase">
+          <div class="prep-phase-head">
+            <h3>Saturday night</h3>
+            <span class="time">~5 min</span>
+          </div>
+          <ol class="prep-list">
+          <li><strong>Soak</strong> 300 g whole black urad + 50 g rajma (8–12 hrs).</li>
+          <li>Optional: soak 300 g chana dal 30 min right before cooking Sunday instead of overnight.</li>
+          </ol>
+        </div>
+        <div class="prep-phase">
+          <div class="prep-phase-head">
+            <h3>Phase 1 — Dal makhani first (longest item)</h3>
+            <span class="time">~10 min start · 40–50 min pressure + simmer later</span>
+          </div>
+          <ol class="prep-list">
+          <li>Drain urad/rajma; pressure-cook with water + salt until <strong>very soft and creamy</strong> (often 40–50 min total).</li>
+          <li>Same window: start <strong>quinoa/rice</strong> and boil a big pot of <strong>potatoes</strong> (aloo matar + optional jeera aloo).</li>
+          <li>If you have a second cooker: start <strong>chana dal + lauki</strong> once makhani is under pressure (or right after).</li>
+          <li><em>While pressure cooks → Phase 2 chopping.</em></li>
+          </ol>
+        </div>
+        <div class="prep-phase">
+          <div class="prep-phase-head">
+            <h3>Phase 2 — Chop + paneer gravy mise en place</h3>
+            <span class="time">~20–25 min</span>
+          </div>
+          <ol class="prep-list">
+          <li>Chop: onions, tomatoes (or blend purée), lauki cubes, cauliflower florets, ginger-garlic, chilies.</li>
+          <li>Cube <strong>400–500 g paneer</strong>. Measure kasuri methi, peas, spices into small bowls.</li>
+          <li>Build <strong>dal makhani gravy base</strong> (onion → tomato purée → spices) so it’s ready when beans are soft.</li>
+          </ol>
+        </div>
+        <div class="prep-phase">
+          <div class="prep-phase-head">
+            <h3>Phase 3 — Finish in this order</h3>
+            <span class="time">~50–60 min</span>
+          </div>
+          <ol class="prep-list">
+          <li><strong>Dal makhani:</strong> beans + gravy → low simmer ≥20 min (30 better) → cream or whisked yogurt + kasuri methi. <strong>~250 g portions.</strong></li>
+          <li><strong>Lauki chana dal:</strong> cook through → tadka. <strong>~250 g portions.</strong></li>
+          <li><strong>Methi paneer:</strong> onion-tomato gravy → methi → paneer 5 min. <strong>~280 g portions.</strong></li>
+          <li><strong>Aloo matar:</strong> one pan, ~20 min. <strong>~250 g portions.</strong></li>
+          <li><strong>Aloo gobi:</strong> wide pan, dry-ish, 12–15 min — or save cauliflower for Wed so it stays firmer.</li>
+          <li>Optional: toss leftover boiled potatoes into <strong>jeera aloo</strong> for a spare side.</li>
+          </ol>
+        </div>
+        <div class="prep-phase">
+          <div class="prep-phase-head">
+            <h3>Phase 4 — Portion</h3>
+            <span class="time">~10–15 min</span>
+          </div>
+          <ol class="prep-list">
+          <li>Cool dal makhani fully before lids (it thickens a lot cold — portion while warm-spoonable).</li>
+          <li>Box: dals 250 g, paneer curry 280 g, sabzi 150–250 g, grain 150 g, yogurt 150–200 g.</li>
+          </ol>
+        </div>
+      </div>
+      <p class="prep-note"><strong>Efficiency rule:</strong> Dal makhani is the critical path — start it first, simmer it while you cook every other dish. Aloo gobi is the best candidate to defer mid-week if you’re tired.</p>
+    </div>
+  </section>
+
+  <section id="tips">
+    <div class="wrap">
+      <div class="section-head"><h2>Daily tips</h2></div>
+      <div class="tips">
+        <div class="tip">
+          <strong>Dal makhani</strong>
+          Low simmer = creaminess without endless cream.
+        </div>
+        <div class="tip">
+          <strong>Protein rule</strong>
+          Dal + yogurt or paneer every meal. Sabzi fills the plate, not the protein quota.
+        </div>
+        <div class="tip">
+          <strong>Aloo gobi</strong>
+          Wide pan + less water keeps it roasted, not steamed.
+        </div>
+        <div class="tip">
+          <strong>No mushrooms</strong>
+          None in this week’s recipes.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>Week 4 · North Indian · no mushrooms · estimates ±15%</footer>
+  <nav class="bottom-nav" aria-label="Quick jump">
+    <a href="#grocery">
+      <svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+      List
+    </a>
+    <a href="#menu">
+      <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+      Menu
+    </a>
+    <a href="#recipes">
+      <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+      Recipes
+    </a>
+    <a href="#breakfast">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+      Breakfast
+    </a>
+  </nav>
+  <script src="grocery.js"></script>
+</body>
+</html>
