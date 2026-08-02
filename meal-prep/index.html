@@ -1,0 +1,1329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#1a3c34" />
+  <meta name="description" content="High-protein vegetarian Indian meal prep — 7-day menu, recipes, and a short phone-friendly grocery list." />
+  <title>Meal Prep Menu · High-Protein Vegetarian Indian</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f6f1e8;
+      --bg-card: #fffcf7;
+      --ink: #1c1917;
+      --ink-muted: #57534e;
+      --accent: #1a3c34;
+      --accent-soft: #2d5a4e;
+      --gold: #c4783a;
+      --gold-soft: #e8a86a;
+      --line: #e7e0d4;
+      --check: #1a3c34;
+      --shadow: 0 8px 30px rgba(28, 25, 23, 0.08);
+      --radius: 18px;
+      --safe-b: env(safe-area-inset-bottom, 0px);
+      --nav-h: 64px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-h) + 12px); }
+
+    body {
+      font-family: "DM Sans", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.55;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      padding-bottom: calc(var(--nav-h) + var(--safe-b) + 16px);
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    a { color: var(--accent); }
+
+    /* —— Layout —— */
+    .wrap {
+      width: min(720px, 100% - 2rem);
+      margin-inline: auto;
+    }
+
+    .wide {
+      width: min(1100px, 100% - 2rem);
+      margin-inline: auto;
+    }
+
+    /* —— Hero —— */
+    .hero {
+      position: relative;
+      min-height: 52vh;
+      min-height: 52dvh;
+      display: flex;
+      align-items: flex-end;
+      color: #fff;
+      overflow: hidden;
+      background: var(--accent);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(26, 60, 52, 0.25) 0%, rgba(26, 60, 52, 0.88) 100%),
+        url("https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      padding: 2.5rem 0 2rem;
+      width: min(720px, 100% - 2rem);
+      margin-inline: auto;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gold-soft);
+      margin-bottom: 0.75rem;
+    }
+
+    .hero h1 {
+      font-family: Fraunces, Georgia, serif;
+      font-size: clamp(1.85rem, 5.5vw, 2.75rem);
+      font-weight: 600;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      max-width: 14ch;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero p {
+      color: rgba(255, 255, 255, 0.88);
+      max-width: 36ch;
+      font-size: 1.02rem;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-top: 1.25rem;
+    }
+
+    .tag {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(6px);
+      border-radius: 999px;
+      padding: 0.35rem 0.75rem;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    /* —— Sections —— */
+    section {
+      padding: 2.25rem 0;
+    }
+
+    section + section {
+      border-top: 1px solid var(--line);
+    }
+
+    .section-head {
+      margin-bottom: 1.25rem;
+    }
+
+    .section-head h2 {
+      font-family: Fraunces, Georgia, serif;
+      font-size: clamp(1.45rem, 3.5vw, 1.85rem);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: var(--accent);
+    }
+
+    .section-head p {
+      color: var(--ink-muted);
+      margin-top: 0.35rem;
+      font-size: 0.95rem;
+    }
+
+    /* —— Sticky mobile nav —— */
+    .bottom-nav {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 50;
+      height: calc(var(--nav-h) + var(--safe-b));
+      padding-bottom: var(--safe-b);
+      background: rgba(255, 252, 247, 0.92);
+      backdrop-filter: blur(14px);
+      border-top: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .bottom-nav a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.2rem;
+      text-decoration: none;
+      color: var(--ink-muted);
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .bottom-nav a:hover,
+    .bottom-nav a:focus-visible {
+      color: var(--accent);
+    }
+
+    .bottom-nav svg {
+      width: 22px;
+      height: 22px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    /* —— Grocery —— */
+    .grocery-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .progress {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--accent);
+      background: #e6efe9;
+      padding: 0.4rem 0.75rem;
+      border-radius: 999px;
+    }
+
+    .btn-ghost {
+      appearance: none;
+      border: 1px solid var(--line);
+      background: var(--bg-card);
+      color: var(--ink-muted);
+      font: inherit;
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 0.45rem 0.85rem;
+      border-radius: 999px;
+      cursor: pointer;
+    }
+
+    .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+
+    .grocery-groups {
+      display: grid;
+      gap: 0.85rem;
+    }
+
+    .grocery-card {
+      background: var(--bg-card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .grocery-card h3 {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--gold);
+      padding: 0.85rem 1rem 0.35rem;
+    }
+
+    .check-list {
+      list-style: none;
+    }
+
+    .check-list li {
+      border-top: 1px solid var(--line);
+    }
+
+    .check-list li:first-child {
+      border-top: none;
+    }
+
+    .check-list label {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.85rem;
+      padding: 0.9rem 1rem;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+      min-height: 48px;
+      user-select: none;
+    }
+
+    .check-list input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .box {
+      flex: 0 0 auto;
+      width: 24px;
+      height: 24px;
+      margin-top: 1px;
+      border: 2px solid #c4bbb0;
+      border-radius: 7px;
+      display: grid;
+      place-items: center;
+      transition: 0.15s ease;
+      background: #fff;
+    }
+
+    .box svg {
+      width: 14px;
+      height: 14px;
+      stroke: #fff;
+      fill: none;
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      opacity: 0;
+      transform: scale(0.6);
+      transition: 0.15s ease;
+    }
+
+    .check-list input:checked + .box {
+      background: var(--check);
+      border-color: var(--check);
+    }
+
+    .check-list input:checked + .box svg {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .check-list input:checked ~ .item-text {
+      color: var(--ink-muted);
+      text-decoration: line-through;
+      text-decoration-color: #b5aea4;
+    }
+
+    .item-text {
+      flex: 1;
+      font-size: 1.02rem;
+      font-weight: 500;
+      line-height: 1.35;
+      transition: 0.15s ease;
+    }
+
+    .item-text small {
+      display: block;
+      font-weight: 400;
+      font-size: 0.82rem;
+      color: var(--ink-muted);
+      margin-top: 0.15rem;
+      text-decoration: none !important;
+    }
+
+    .check-list input:focus-visible + .box {
+      outline: 2px solid var(--gold);
+      outline-offset: 2px;
+    }
+
+    /* —— Day menu —— */
+    .days {
+      display: grid;
+      gap: 1rem;
+    }
+
+    @media (min-width: 700px) {
+      .days { grid-template-columns: 1fr 1fr; }
+    }
+
+    .day-card {
+      background: var(--bg-card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .day-card .media {
+      position: relative;
+      aspect-ratio: 16 / 10;
+      background: #ddd6cb;
+    }
+
+    .day-card .media img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .day-badge {
+      position: absolute;
+      top: 0.75rem;
+      left: 0.75rem;
+      background: rgba(26, 60, 52, 0.92);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.35rem 0.65rem;
+      border-radius: 999px;
+    }
+
+    .day-body {
+      padding: 1rem 1.05rem 1.15rem;
+      display: grid;
+      gap: 0.75rem;
+      flex: 1;
+    }
+
+    .meal {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0.55rem 0.75rem;
+      align-items: start;
+    }
+
+    .meal-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      font-size: 0.95rem;
+      background: #eef4f1;
+    }
+
+    .meal-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .meal-title {
+      font-weight: 600;
+      font-size: 0.95rem;
+      line-height: 1.35;
+      color: var(--ink);
+    }
+
+    /* —— Recipe grid —— */
+    .recipes {
+      display: grid;
+      gap: 1rem;
+    }
+
+    @media (min-width: 640px) {
+      .recipes { grid-template-columns: 1fr 1fr; }
+    }
+
+    .recipe {
+      background: var(--bg-card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .recipe .media {
+      aspect-ratio: 4 / 3;
+      background: #ddd6cb;
+    }
+
+    .recipe .media img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .recipe-body {
+      padding: 1.05rem 1.1rem 1.2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+      flex: 1;
+    }
+
+    .recipe h3 {
+      font-family: Fraunces, Georgia, serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: -0.01em;
+    }
+
+    .servings {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--ink-muted);
+    }
+
+    .ingredients {
+      font-size: 0.9rem;
+      color: var(--ink-muted);
+      line-height: 1.45;
+    }
+
+    .method {
+      font-size: 0.92rem;
+      color: var(--ink);
+      margin-top: 0.15rem;
+    }
+
+    /* —— Breakfast —— */
+    .breakfast-grid {
+      display: grid;
+      gap: 1rem;
+    }
+
+    @media (min-width: 700px) {
+      .breakfast-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .b-card {
+      background: var(--bg-card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .b-card .media {
+      aspect-ratio: 1 / 1;
+      background: #ddd6cb;
+    }
+
+    .b-card .media img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .b-card .body {
+      padding: 1rem 1.05rem 1.15rem;
+    }
+
+    .b-card h3 {
+      font-family: Fraunces, Georgia, serif;
+      font-size: 1.1rem;
+      color: var(--accent);
+      margin-bottom: 0.35rem;
+    }
+
+    .b-card .time {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.55rem;
+    }
+
+    .b-card ul {
+      margin: 0.4rem 0 0 1.1rem;
+      font-size: 0.9rem;
+      color: var(--ink-muted);
+    }
+
+    .b-card li { margin-bottom: 0.2rem; }
+
+    .b-card .how {
+      margin-top: 0.7rem;
+      font-size: 0.88rem;
+      color: var(--ink);
+      padding-top: 0.65rem;
+      border-top: 1px dashed var(--line);
+    }
+
+    /* —— Prep steps —— */
+    .prep-list {
+      counter-reset: prep;
+      list-style: none;
+      display: grid;
+      gap: 0.65rem;
+    }
+
+    .prep-list li {
+      counter-increment: prep;
+      background: var(--bg-card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 0.9rem 1rem 0.9rem 3.1rem;
+      position: relative;
+      box-shadow: 0 2px 10px rgba(28, 25, 23, 0.04);
+      font-size: 0.95rem;
+    }
+
+    .prep-list li::before {
+      content: counter(prep);
+      position: absolute;
+      left: 0.85rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1.7rem;
+      height: 1.7rem;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 700;
+      display: grid;
+      place-items: center;
+    }
+
+    /* —— Tips —— */
+    .tips {
+      display: grid;
+      gap: 0.65rem;
+    }
+
+    @media (min-width: 600px) {
+      .tips { grid-template-columns: 1fr 1fr; }
+    }
+
+    .tip {
+      background: linear-gradient(135deg, #eef4f1, #f7f3eb);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 0.95rem 1rem;
+      font-size: 0.93rem;
+    }
+
+    .tip strong {
+      color: var(--accent);
+      display: block;
+      margin-bottom: 0.2rem;
+      font-size: 0.82rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    /* —— Snack strip —— */
+    .snack-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1.25rem;
+    }
+
+    .chip {
+      background: var(--bg-card);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 0.45rem 0.85rem;
+      font-size: 0.88rem;
+      font-weight: 500;
+    }
+
+    /* —— Footer —— */
+    footer {
+      text-align: center;
+      padding: 1.5rem 1rem 0.5rem;
+      color: var(--ink-muted);
+      font-size: 0.85rem;
+    }
+
+    /* Hide nav labels on very small if needed — keep full */
+    @media (min-width: 900px) {
+      body { padding-bottom: 2rem; }
+      .bottom-nav {
+        display: none;
+      }
+      .desktop-nav {
+        display: flex !important;
+      }
+    }
+
+    .desktop-nav {
+      display: none;
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background: rgba(246, 241, 232, 0.9);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      padding: 0.7rem 0;
+      gap: 0.35rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .desktop-nav a {
+      text-decoration: none;
+      color: var(--ink-muted);
+      font-size: 0.88rem;
+      font-weight: 600;
+      padding: 0.4rem 0.85rem;
+      border-radius: 999px;
+    }
+
+    .desktop-nav a:hover {
+      background: #e6efe9;
+      color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">✦ Weekly meal prep</div>
+      <h1>High-Protein Vegetarian Indian</h1>
+      <p>No tofu. Big batches on Sunday. Grab-and-go breakfasts. Protein from dal, chana, rajma, paneer &amp; Greek yogurt.</p>
+      <div class="hero-tags">
+        <span class="tag">7 days</span>
+        <span class="tag">~2–2.5 hr prep</span>
+        <span class="tag">Phone-friendly list</span>
+      </div>
+    </div>
+  </header>
+
+  <nav class="desktop-nav wide" aria-label="Sections">
+    <a href="#grocery">Grocery</a>
+    <a href="#menu">Menu</a>
+    <a href="#recipes">Recipes</a>
+    <a href="#breakfast">Breakfast</a>
+    <a href="#prep">Sunday prep</a>
+  </nav>
+
+  <!-- GROCERY — short, phone-first -->
+  <section id="grocery">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Grocery list</h2>
+        <p>Short checklist — tap to check off. Saved on this phone.</p>
+      </div>
+
+      <div class="grocery-toolbar">
+        <span class="progress" id="progress" aria-live="polite">0 / 0 done</span>
+        <button type="button" class="btn-ghost" id="clear-checks">Clear all</button>
+      </div>
+
+      <div class="grocery-groups">
+        <div class="grocery-card">
+          <h3>Produce</h3>
+          <ul class="check-list">
+            <li>
+              <label>
+                <input type="checkbox" data-key="p1" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Onions <small>6–8</small></span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-key="p2" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Tomatoes <small>8–10</small></span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-key="p3" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Cucumbers <small>3–4</small></span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-key="p4" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Spinach <small>2 large bunches</small></span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-key="p5" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Ginger + garlic + green chilies <small>1 head garlic · 6–8 chilies</small></span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-key="p6" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Cilantro <small>1 bunch</small></span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-key="p7" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Fruit for the week <small>bananas, berries, apple…</small></span>
+              </label>
+            </li>
+          </ul>
+        </div>
+
+        <div class="grocery-card">
+          <h3>Dairy &amp; protein</h3>
+          <ul class="check-list">
+            <li>
+              <label>
+                <input type="checkbox" data-key="d1" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Paneer <small>600–700 g</small></span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-key="d2" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Greek yogurt / hung curd <small>1.5–2 kg</small></span>
+              </label>
+            </li>
+          </ul>
+        </div>
+
+        <div class="grocery-card">
+          <h3>Legumes &amp; grains</h3>
+          <ul class="check-list">
+            <li>
+              <label>
+                <input type="checkbox" data-key="l1" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Yellow moong dal <small>500 g</small></span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-key="l2" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Masoor or toor dal <small>400–500 g</small></span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-key="l3" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Rajma <small>400–500 g (or canned)</small></span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-key="l4" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Kabuli chana <small>400–500 g (or canned)</small></span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-key="l5" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Quinoa or brown rice <small>1 kg</small></span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-key="l6" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Rolled oats <small>500 g</small></span>
+              </label>
+            </li>
+          </ul>
+        </div>
+
+        <div class="grocery-card">
+          <h3>Snacks &amp; pantry</h3>
+          <ul class="check-list">
+            <li>
+              <label>
+                <input type="checkbox" data-key="s1" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Roasted chana or peanuts <small>200–250 g</small></span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-key="s2" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Almonds / nuts <small>optional</small></span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-key="s3" />
+                <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+                <span class="item-text">Spices you need <small>turmeric, cumin, coriander, garam masala, salt, oil/ghee</small></span>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7-DAY MENU -->
+  <section id="menu">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>7-day menu</h2>
+        <p>Lunch + dinner. Always pair a legume dish with yogurt or paneer.</p>
+      </div>
+
+      <div class="days">
+        <article class="day-card">
+          <div class="media">
+            <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=800&q=80" alt="Rajma curry bowl" loading="lazy" width="800" height="500" />
+            <span class="day-badge">Mon</span>
+          </div>
+          <div class="day-body">
+            <div class="meal">
+              <div class="meal-icon" aria-hidden="true">🌞</div>
+              <div>
+                <div class="meal-label">Lunch</div>
+                <div class="meal-title">Rajma + quinoa + cucumber salad + yogurt</div>
+              </div>
+            </div>
+            <div class="meal">
+              <div class="meal-icon" aria-hidden="true">🌙</div>
+              <div>
+                <div class="meal-label">Dinner</div>
+                <div class="meal-title">Mixed dal (spinach) + 100 g paneer + roti/quinoa</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="day-card">
+          <div class="media">
+            <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=800&q=80" alt="Chana masala with rice" loading="lazy" width="800" height="500" />
+            <span class="day-badge">Tue</span>
+          </div>
+          <div class="day-body">
+            <div class="meal">
+              <div class="meal-icon" aria-hidden="true">🌞</div>
+              <div>
+                <div class="meal-label">Lunch</div>
+                <div class="meal-title">Chana masala + rice/quinoa + raita</div>
+              </div>
+            </div>
+            <div class="meal">
+              <div class="meal-icon" aria-hidden="true">🌙</div>
+              <div>
+                <div class="meal-label">Dinner</div>
+                <div class="meal-title">Mixed dal + sautéed spinach + roti/quinoa</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="day-card">
+          <div class="media">
+            <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=800&q=80" alt="Indian curry plate" loading="lazy" width="800" height="500" />
+            <span class="day-badge">Wed</span>
+          </div>
+          <div class="day-body">
+            <div class="meal">
+              <div class="meal-icon" aria-hidden="true">🌞</div>
+              <div>
+                <div class="meal-label">Lunch</div>
+                <div class="meal-title">Rajma + quinoa + salad + yogurt</div>
+              </div>
+            </div>
+            <div class="meal">
+              <div class="meal-icon" aria-hidden="true">🌙</div>
+              <div>
+                <div class="meal-label">Dinner</div>
+                <div class="meal-title">Paneer bhurji + large salad or sautéed spinach</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="day-card">
+          <div class="media">
+            <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80" alt="Dal and grains bowl" loading="lazy" width="800" height="500" />
+            <span class="day-badge">Thu</span>
+          </div>
+          <div class="day-body">
+            <div class="meal">
+              <div class="meal-icon" aria-hidden="true">🌞</div>
+              <div>
+                <div class="meal-label">Lunch</div>
+                <div class="meal-title">Chana masala + roti/quinoa + raita</div>
+              </div>
+            </div>
+            <div class="meal">
+              <div class="meal-icon" aria-hidden="true">🌙</div>
+              <div>
+                <div class="meal-label">Dinner</div>
+                <div class="meal-title">Mixed dal (spinach) + quinoa + yogurt</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="day-card">
+          <div class="media">
+            <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80" alt="Paneer dish" loading="lazy" width="800" height="500" />
+            <span class="day-badge">Fri</span>
+          </div>
+          <div class="day-body">
+            <div class="meal">
+              <div class="meal-icon" aria-hidden="true">🌞</div>
+              <div>
+                <div class="meal-label">Lunch</div>
+                <div class="meal-title">Rajma + rice/quinoa + salad + yogurt</div>
+              </div>
+            </div>
+            <div class="meal">
+              <div class="meal-icon" aria-hidden="true">🌙</div>
+              <div>
+                <div class="meal-label">Dinner</div>
+                <div class="meal-title">Paneer bhurji (or remaining paneer) + mixed dal + spinach</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="day-card">
+          <div class="media">
+            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80" alt="Colorful grain and veggie bowl" loading="lazy" width="800" height="500" />
+            <span class="day-badge">Sat</span>
+          </div>
+          <div class="day-body">
+            <div class="meal">
+              <div class="meal-icon" aria-hidden="true">🌞</div>
+              <div>
+                <div class="meal-label">Lunch</div>
+                <div class="meal-title">Leftover chana/rajma bowl + extra yogurt + salad</div>
+              </div>
+            </div>
+            <div class="meal">
+              <div class="meal-icon" aria-hidden="true">🌙</div>
+              <div>
+                <div class="meal-label">Dinner</div>
+                <div class="meal-title">High-protein khichdi (with spinach) + big yogurt</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="day-card">
+          <div class="media">
+            <img src="https://images.unsplash.com/photo-1505253758473-96b7015fcd40?auto=format&fit=crop&w=800&q=80" alt="Light Indian meal with yogurt" loading="lazy" width="800" height="500" />
+            <span class="day-badge">Sun</span>
+          </div>
+          <div class="day-body">
+            <div class="meal">
+              <div class="meal-icon" aria-hidden="true">🌞</div>
+              <div>
+                <div class="meal-label">Lunch</div>
+                <div class="meal-title">Remaining batches or paneer + yogurt + salad</div>
+              </div>
+            </div>
+            <div class="meal">
+              <div class="meal-icon" aria-hidden="true">🌙</div>
+              <div>
+                <div class="meal-label">Dinner</div>
+                <div class="meal-title">Light mixed dal or leftover khichdi + yogurt</div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="snack-strip" aria-label="Snacks">
+        <span class="chip">🥜 Roasted chana / peanuts</span>
+        <span class="chip">🥣 Extra Greek yogurt</span>
+        <span class="chip">🥒 Cucumber + yogurt</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECIPES -->
+  <section id="recipes">
+    <div class="wide">
+      <div class="section-head wrap" style="width: min(720px, 100%); margin-inline: auto; margin-bottom: 1.25rem;">
+        <h2>Core recipes</h2>
+        <p>Batch these on Sunday. Reheat with a splash of water.</p>
+      </div>
+
+      <div class="recipes">
+        <article class="recipe">
+          <div class="media">
+            <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80" alt="Mixed dal with spinach" loading="lazy" width="800" height="600" />
+          </div>
+          <div class="recipe-body">
+            <h3>Mixed Dal (with Spinach)</h3>
+            <div class="servings">6–8 servings</div>
+            <p class="ingredients">1½–2 cups moong + masoor · 1 onion · 2 tomatoes · ginger-garlic · turmeric, cumin, salt, chili · ½–1 bunch spinach</p>
+            <p class="method">Pressure-cook dal with turmeric + salt. Temper cumin, onion, ginger-garlic, tomato. Add dal, simmer. Stir in spinach to wilt.</p>
+          </div>
+        </article>
+
+        <article class="recipe">
+          <div class="media">
+            <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=800&q=80" alt="Rajma masala" loading="lazy" width="800" height="600" />
+          </div>
+          <div class="recipe-body">
+            <h3>Rajma Masala</h3>
+            <div class="servings">6 servings</div>
+            <p class="ingredients">Cooked rajma · onion-tomato base · rajma/garam masala · cumin · coriander · amchur · salt</p>
+            <p class="method">Combine cooked rajma with masala base and spices. Simmer 15–20 min until thick and saucy.</p>
+          </div>
+        </article>
+
+        <article class="recipe">
+          <div class="media">
+            <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=800&q=80" alt="Chana masala" loading="lazy" width="800" height="600" />
+          </div>
+          <div class="recipe-body">
+            <h3>Chana Masala</h3>
+            <div class="servings">6 servings</div>
+            <p class="ingredients">Cooked kabuli chana · onion-tomato base · chana masala powder · cumin · coriander · salt</p>
+            <p class="method">Same method as rajma — use cooked chana + chana masala powder. Simmer until flavorful.</p>
+          </div>
+        </article>
+
+        <article class="recipe">
+          <div class="media">
+            <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80" alt="Paneer bhurji" loading="lazy" width="800" height="600" />
+          </div>
+          <div class="recipe-body">
+            <h3>Paneer Bhurji</h3>
+            <div class="servings">Half of your paneer batch</div>
+            <p class="ingredients">300–400 g crumbled paneer · 1–2 onions · 2 tomatoes · chili · ginger · turmeric, cumin, garam masala, salt</p>
+            <p class="method">Sauté onion + chili + ginger → tomato + spices → paneer. Cook 5–7 min.</p>
+          </div>
+        </article>
+
+        <article class="recipe">
+          <div class="media">
+            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80" alt="High-protein khichdi bowl" loading="lazy" width="800" height="600" />
+          </div>
+          <div class="recipe-body">
+            <h3>High-Protein Khichdi</h3>
+            <div class="servings">Sat (or Sun) dinner</div>
+            <p class="ingredients">1 cup mixed dal · ½–¾ cup quinoa/rice · onion · tomato · ginger-garlic · turmeric, cumin, salt · ½ bunch spinach</p>
+            <p class="method">Pressure-cook dal + grain. Temper and mix in. Wilt spinach. Serve with Greek yogurt.</p>
+          </div>
+        </article>
+
+        <article class="recipe">
+          <div class="media">
+            <img src="https://images.unsplash.com/photo-1576045057995-568f588f82fb?auto=format&fit=crop&w=800&q=80" alt="Sautéed spinach" loading="lazy" width="800" height="600" />
+          </div>
+          <div class="recipe-body">
+            <h3>Simple Sautéed Spinach</h3>
+            <div class="servings">Quick side · Tue / Wed / Fri</div>
+            <p class="ingredients">Spinach · 1 tsp oil · cumin · garlic/chili · salt · turmeric</p>
+            <p class="method">Oil → cumin → garlic/chili → spinach + salt + turmeric. Wilt 2–3 min.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- BREAKFAST -->
+  <section id="breakfast">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Grab-and-go breakfasts</h2>
+        <p>Pick one every morning. Keep the yogurt portion generous for protein.</p>
+      </div>
+
+      <div class="breakfast-grid">
+        <article class="b-card">
+          <div class="media">
+            <img src="https://images.unsplash.com/photo-1517673400267-0251440c45dc?auto=format&fit=crop&w=700&q=80" alt="Overnight oats with fruit" loading="lazy" width="700" height="700" />
+          </div>
+          <div class="body">
+            <span class="time">Night before · best option</span>
+            <h3>Overnight Oats</h3>
+            <ul>
+              <li>½ cup rolled oats</li>
+              <li>150–200 g Greek yogurt</li>
+              <li>½–¾ cup milk or water</li>
+              <li>1 fruit + optional chana/nuts</li>
+            </ul>
+            <p class="how"><strong>Night:</strong> mix oats + yogurt + liquid. <strong>Morning:</strong> fruit + toppings.</p>
+          </div>
+        </article>
+
+        <article class="b-card">
+          <div class="media">
+            <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=700&q=80" alt="Greek yogurt bowl with fruit" loading="lazy" width="700" height="700" />
+          </div>
+          <div class="body">
+            <span class="time">1–2 minutes</span>
+            <h3>Greek Yogurt Jar</h3>
+            <ul>
+              <li>200–250 g Greek yogurt</li>
+              <li>1–2 pieces fruit, chopped</li>
+              <li>Optional: roasted chana or nuts</li>
+            </ul>
+            <p class="how">Layer the night before or morning of. Ready in under 2 minutes.</p>
+          </div>
+        </article>
+
+        <article class="b-card">
+          <div class="media">
+            <img src="https://images.unsplash.com/photo-1517673132405-a56a62b18caf?auto=format&fit=crop&w=700&q=80" alt="Hot oatmeal bowl" loading="lazy" width="700" height="700" />
+          </div>
+          <div class="body">
+            <span class="time">Under 5 minutes</span>
+            <h3>Quick Hot Oatmeal</h3>
+            <ul>
+              <li>½ cup rolled oats + water/milk</li>
+              <li>Microwave 2–3 min</li>
+              <li>Stir in 100–150 g yogurt + fruit</li>
+            </ul>
+            <p class="how">Stovetop or microwave. Finish with yogurt for protein.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUNDAY PREP -->
+  <section id="prep">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Sunday prep</h2>
+        <p>About 2–2.5 hours. Store everything airtight.</p>
+      </div>
+
+      <ol class="prep-list">
+        <li>Quick-soak or pressure-cook rajma + chana (or use canned).</li>
+        <li>Pressure-cook rajma and chana fully.</li>
+        <li>Cook 3–4 cups mixed dal (moong + masoor). Keep thick.</li>
+        <li>Make a large onion-tomato masala base.</li>
+        <li>Crumble/cube all paneer → turn half into bhurji.</li>
+        <li>Wash &amp; chop spinach. Stir half into mixed dal (or save for sauté).</li>
+        <li>Cook 4–5 cups quinoa or brown rice.</li>
+        <li>Portion yogurt and chop remaining veggies. Store airtight.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- TIPS -->
+  <section id="tips">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Daily tips</h2>
+      </div>
+      <div class="tips">
+        <div class="tip">
+          <strong>Reheat</strong>
+          Splash of water on curries — keeps them saucy.
+        </div>
+        <div class="tip">
+          <strong>Protein rule</strong>
+          Legume dish + generous yogurt or paneer every meal.
+        </div>
+        <div class="tip">
+          <strong>Portions</strong>
+          Keep dal / rajma / chana generous. Rotis optional — quinoa or rice is fine.
+        </div>
+        <div class="tip">
+          <strong>Spinach plan</strong>
+          Half into mixed dal on prep day. Rest for quick sauté or khichdi.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    High-protein · vegetarian · no tofu · made for your week
+  </footer>
+
+  <!-- Mobile bottom nav -->
+  <nav class="bottom-nav" aria-label="Quick jump">
+    <a href="#grocery">
+      <svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+      List
+    </a>
+    <a href="#menu">
+      <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+      Menu
+    </a>
+    <a href="#recipes">
+      <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+      Recipes
+    </a>
+    <a href="#breakfast">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+      Breakfast
+    </a>
+  </nav>
+
+  <script>
+    (function () {
+      const STORAGE_KEY = "meal-prep-grocery-v1";
+      const boxes = Array.from(document.querySelectorAll('#grocery input[type="checkbox"][data-key]'));
+      const progress = document.getElementById("progress");
+      const clearBtn = document.getElementById("clear-checks");
+
+      function load() {
+        try {
+          return JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
+        } catch {
+          return {};
+        }
+      }
+
+      function save(state) {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+      }
+
+      function updateProgress() {
+        const total = boxes.length;
+        const done = boxes.filter((b) => b.checked).length;
+        progress.textContent = done + " / " + total + " done";
+      }
+
+      const state = load();
+      boxes.forEach((box) => {
+        box.checked = !!state[box.dataset.key];
+        box.addEventListener("change", () => {
+          const next = load();
+          next[box.dataset.key] = box.checked;
+          save(next);
+          updateProgress();
+        });
+      });
+      updateProgress();
+
+      clearBtn.addEventListener("click", () => {
+        boxes.forEach((b) => (b.checked = false));
+        save({});
+        updateProgress();
+      });
+    })();
+  </script>
+</body>
+</html>
