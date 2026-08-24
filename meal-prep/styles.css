@@ -73,6 +73,9 @@
     .hero[data-week="green"] { --hero-img: url("images/hero-green.jpg"); }
     .hero[data-week="veg"] { --hero-img: url("images/hero-veg.jpg"); }
     .hero[data-week="comfort"] { --hero-img: url("images/hero-comfort.jpg"); }
+    .hero[data-week="light"] { --hero-img: url("images/lobia.jpg"); }
+    .hero[data-week="ghar"] { --hero-img: url("images/aloo-matar.jpg"); }
+    .hero[data-week="onepot"] { --hero-img: url("images/khichdi.jpg"); }
     /* all weeks are North Indian */
 
     .hero-inner {
