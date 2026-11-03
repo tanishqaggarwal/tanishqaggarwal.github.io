@@ -1,0 +1,860 @@
+:root {
+  --ink: #2a241e;
+  --paper: #f6f0e2;
+  --paper-deep: #efe4cc;
+  --sun: #ffc53d;
+  --blush: #ff8aa0;
+  --marker: #e23b3b;
+  --sea: #4eacd6;
+  --land: #8fd18a;
+  --wind: #7ebfe0;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  overscroll-behavior: none;
+  -webkit-text-size-adjust: 100%;
+  background:
+    radial-gradient(ellipse at 50% 42%, #fffdf8 0%, var(--paper) 62%, var(--paper-deep) 100%);
+  color: var(--ink);
+  font-family: "Shantell Sans", "Chalkboard SE", "Comic Sans MS", cursive;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: #ffe08a;
+  color: var(--ink);
+}
+
+#safe-probe {
+  position: fixed;
+  visibility: hidden;
+  pointer-events: none;
+  padding:
+    env(safe-area-inset-top, 0px)
+    env(safe-area-inset-right, 0px)
+    env(safe-area-inset-bottom, 0px)
+    env(safe-area-inset-left, 0px);
+}
+
+.grain {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.09;
+  z-index: 1;
+}
+
+.stage {
+  position: relative;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+.sky {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.sky svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.slot {
+  position: absolute;
+  z-index: 2;
+  width: max-content;
+  max-width: 94vw;
+  transform: translateX(-50%);
+  visibility: hidden;
+}
+
+h1 {
+  margin: 0;
+  width: min(92vw, 36rem);
+  text-align: center;
+  font-weight: 700;
+  font-size: clamp(1.7rem, 4.5vw, 3.05rem);
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+}
+
+.chrome-pop { opacity: 0; }
+
+.chrome-pop.play {
+  animation: pop-in 0.62s cubic-bezier(0.18, 1.28, 0.36, 1) both;
+}
+
+.chrome-pop.settled {
+  opacity: 1;
+  transform: none;
+}
+
+.chrome-pop.bye {
+  animation: pop-out 0.32s ease forwards;
+}
+
+.btn {
+  font-family: inherit;
+  font-size: 1.28rem;
+  font-weight: 600;
+  color: var(--ink);
+  background: #fffdf8;
+  border: 3px solid var(--ink);
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+  padding: 0.5rem 1.2rem 0.58rem;
+  box-shadow: 4px 4px 0 var(--ink);
+  cursor: pointer;
+  line-height: 1.15;
+  white-space: nowrap;
+  user-select: none;
+  touch-action: manipulation;
+}
+
+.btn:hover { background: #fff3c4; }
+
+.btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 var(--ink);
+}
+
+.btn:focus-visible,
+.password:focus-visible {
+  outline: 3px solid var(--marker);
+  outline-offset: 3px;
+}
+
+.remember-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  position: relative;
+}
+
+.password {
+  font-family: inherit;
+  font-size: 1.15rem;
+  width: min(220px, 46vw);
+  margin: 0;
+  padding: 0.5rem 0.8rem;
+  color: var(--ink);
+  background: #fffdf8;
+  border: 3px solid var(--ink);
+  border-radius: 14px 18px 12px 16px;
+  box-shadow: 4px 4px 0 var(--ink);
+}
+
+.password::placeholder { color: #8a8176; }
+
+.password.is-wrong,
+.password.is-wrong:focus,
+.password.is-wrong:focus-visible {
+  border-color: var(--marker);
+  outline: 3px solid var(--marker);
+  box-shadow: 4px 4px 0 var(--marker);
+}
+
+.password.is-ok,
+.password.is-ok:focus,
+.password.is-ok:focus-visible,
+.password.is-ok:disabled {
+  opacity: 1;
+  border-color: #2f9e5a;
+  outline: 3px solid #2f9e5a;
+  box-shadow: 4px 4px 0 #2f9e5a;
+}
+
+.password[hidden] { display: none; }
+
+.btn:disabled,
+.password:disabled { opacity: 0.7; }
+
+.password-hint {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(100% + 0.45rem);
+  margin: 0;
+  min-height: 1.2em;
+  text-align: center;
+  color: var(--marker);
+  font-size: 1.05rem;
+}
+
+.remember-row.shake { animation: shake 0.42s ease; }
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-7px); }
+  40% { transform: translateX(6px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(3px); }
+}
+
+.story {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  width: min(288px, 32vw);
+  transform: translateY(-50%);
+  /* This element is only a positioner. A scrollbar here is what
+     Safari keeps painting under the picture. */
+  overflow: visible;
+}
+
+.story-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-height: 90dvh;
+  overflow: hidden;
+  text-align: center;
+  padding: 0.85rem 0 0.95rem;
+  background: rgba(246, 240, 226, 0.92);
+  border-radius: 18px 12px 16px 14px;
+}
+
+.story[hidden] { display: none !important; }
+
+.story.side-right { right: max(14px, 1.6vw); left: auto; }
+.story.side-left { left: max(14px, 1.6vw); right: auto; }
+
+.story.pin-top {
+  top: max(12px, 2dvh);
+  bottom: auto;
+  transform: none;
+}
+
+.story.pin-bottom {
+  top: auto;
+  bottom: max(12px, 2dvh);
+  transform: none;
+}
+
+.story-scroll,
+.actions {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.story-scroll {
+  box-sizing: border-box;
+  padding: 0 1.4rem;
+  overflow: visible;
+}
+
+.actions {
+  box-sizing: border-box;
+  padding: 0 1.4rem;
+  overflow: hidden;
+}
+
+.story .btn {
+  max-width: 100%;
+}
+
+.step {
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  margin: 0;
+}
+
+.step.play {
+  visibility: visible;
+  height: auto;
+  overflow: visible;
+  margin: 0.28rem auto;
+  animation: pop-in 0.55s cubic-bezier(0.18, 1.25, 0.4, 1) both;
+}
+
+/* The tilted print and its stacked shadow stay inside this box,
+   so Safari has nothing sideways to scroll. */
+#polaroid.play {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  padding: 0.2rem 0.7rem 0.85rem 0.45rem;
+  overflow: clip;
+}
+
+.actions.play { flex-shrink: 0; }
+
+.story.is-leaving .step.play {
+  animation: pop-out 0.22s ease forwards;
+}
+
+.date-line {
+  font-weight: 700;
+  font-size: clamp(1.16rem, 2.7vw, 1.62rem);
+  line-height: 1.25;
+}
+
+.date-line.play { display: inline-block; }
+
+.blurb {
+  max-width: 36rem;
+  font-size: clamp(1.05rem, 2.2vw, 1.28rem);
+  line-height: 1.45;
+  color: #3d362f;
+}
+
+.polaroid-card {
+  position: relative;
+  width: min(210px, 100%);
+  max-width: 100%;
+  min-width: 0;
+  margin: 0.45rem auto 0;
+  background: #fff;
+  border: 2.5px solid var(--ink);
+  border-radius: 3px 7px 4px 6px;
+  padding: 0.5rem 0.5rem 0.15rem;
+  box-shadow: 3px 4px 0 rgba(42, 36, 30, 0.16);
+}
+
+.polaroid-card.has-more {
+  width: min(210px, 100%);
+  box-shadow:
+    3px 4px 0 rgba(42, 36, 30, 0.16),
+    7px 8px 0 #fffdf8,
+    9px 10px 0 var(--ink);
+}
+
+.photo-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  margin: 0.1rem 0 0.4rem;
+}
+
+.photo-nav[hidden] { display: none; }
+
+.photo-dots { display: flex; gap: 0.3rem; }
+
+.photo-arrow,
+.photo-dot {
+  font-family: inherit;
+  color: var(--ink);
+  background: #fffdf8;
+  border: 2px solid var(--ink);
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+}
+
+.photo-arrow {
+  width: 1.55rem;
+  height: 1.55rem;
+  font-size: 1.15rem;
+  border-radius: 255px 8px 225px 8px / 8px 225px 8px 255px;
+}
+
+.photo-dot {
+  width: 0.72rem;
+  height: 0.72rem;
+  border-radius: 50%;
+}
+
+.photo-dot.is-on { background: var(--ink); }
+
+.photo-arrow:focus-visible,
+.photo-dot:focus-visible {
+  outline: 3px solid var(--marker);
+  outline-offset: 2px;
+}
+
+.tape {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  width: 74px;
+  height: 16px;
+  transform: translateX(-50%) rotate(-2deg);
+  z-index: 1;
+  background: rgba(255, 214, 120, 0.82);
+  border: 1.5px solid rgba(42, 36, 30, 0.22);
+}
+
+.frame {
+  position: relative;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  min-width: 0;
+  background: #e5f5fb;
+}
+
+.frame img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  min-width: 0;
+  object-fit: contain;
+}
+
+.empty-photo {
+  position: absolute;
+  inset: 0;
+}
+.empty-photo svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+figcaption {
+  font-size: 0.98rem;
+  line-height: 1.3;
+  padding: 0.38rem 0.2rem 0.45rem;
+  color: #4e463e;
+}
+
+figcaption:empty { display: none; }
+
+.noscript {
+  position: fixed;
+  inset: auto 1rem 1.5rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+/* Anniversary: circled on the calendar */
+.stage.mode-anniversary[data-style="calendar-circle"] .date-line.play {
+  position: relative;
+}
+
+.stage.mode-anniversary[data-style="calendar-circle"] .date-line.play::before {
+  content: "";
+  position: absolute;
+  inset: -0.42rem -0.95rem;
+  border: 3px solid var(--marker);
+  border-radius: 50%;
+  transform: rotate(-3deg) scale(1.03, 0.94);
+  pointer-events: none;
+}
+
+.stage.mode-anniversary[data-style="calendar-circle"] .tape {
+  background: rgba(255, 186, 186, 0.88);
+}
+
+/* Anniversary: the sun blushes */
+.stage.mode-anniversary[data-style="sun-blush"] .date-line {
+  color: #d4537a;
+}
+
+.stage.mode-anniversary[data-style="sun-blush"] .story-card {
+  background: rgba(255, 246, 234, 0.94);
+}
+
+/* Anniversary: a private constellation */
+.stage.mode-anniversary[data-style="constellation"] .date-line.play::before,
+.stage.mode-anniversary[data-style="constellation"] .date-line.play::after {
+  color: #e2a31a;
+  margin: 0 0.3rem;
+}
+
+.stage.mode-anniversary[data-style="constellation"] .date-line.play::before { content: "★"; }
+.stage.mode-anniversary[data-style="constellation"] .date-line.play::after { content: "★"; }
+
+/* Drawn scene */
+.ray-ink,
+.ray,
+.blush-ray,
+.arm-line {
+  stroke-linecap: round;
+  fill: none;
+}
+
+.ray-ink { stroke: var(--ink); stroke-width: 8; }
+.ray { stroke: var(--sun); stroke-width: 4.5; }
+.blush-ray { stroke: #ff8aa0; stroke-width: 4; opacity: 0; }
+.sun-body { fill: var(--sun); stroke: var(--ink); stroke-width: 3; }
+.sun-glow { fill: #ffd0dc; opacity: 0; }
+.cheek { fill: var(--blush); opacity: 0.5; }
+.eye { fill: var(--ink); }
+.smile { fill: none; stroke: var(--ink); stroke-width: 3.4; stroke-linecap: round; }
+.hand { fill: var(--sun); stroke: var(--ink); stroke-width: 2.4; }
+.arm-line { stroke: var(--ink); stroke-width: 4; }
+
+.stage:not(.is-intro) #arms {
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.blushing .cheek { opacity: 1; }
+.blushing .sun-glow { opacity: 0.9; }
+.blushing .blush-ray { opacity: 1; }
+
+.orbit-ink {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 3.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.orbit-highlight {
+  fill: none;
+  stroke: #ffd15c;
+  stroke-width: 11;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+#orbit-back { opacity: 0; }
+#sun-shadow { fill: rgba(42, 36, 30, 0.2); }
+
+.dot {
+  fill: #fffdf8;
+  stroke: var(--ink);
+  stroke-width: 2.5;
+}
+
+.dot.is-past { fill: var(--ink); }
+.dot.is-now { fill: var(--sun); }
+.heart-dot { fill: #fffdf8; stroke: var(--marker); stroke-width: 1.6; }
+.heart-dot.is-past,
+.heart-dot.is-now { fill: var(--marker); }
+
+.ocean { fill: var(--sea); }
+.land { fill: var(--land); }
+.land.deep { fill: #69b86e; }
+.earth-edge { fill: none; stroke: var(--ink); stroke-width: 2.3; }
+.earth-smile { fill: none; stroke: var(--ink); stroke-width: 1.6; stroke-linecap: round; }
+.shine { fill: #fff; opacity: 0.55; }
+#shadow { fill: rgba(42, 36, 30, 0.2); }
+
+.party-hat {
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center bottom;
+}
+.stage.mode-anniversary[data-style="sun-blush"] .party-hat {
+  animation: hat-pop 0.48s cubic-bezier(0.18, 1.45, 0.4, 1) both;
+}
+.hat-cone { fill: #ff5d7a; stroke: var(--ink); stroke-width: 2; stroke-linejoin: round; }
+.hat-pom { fill: #ffd56a; stroke: var(--ink); stroke-width: 2; }
+
+.wind { opacity: 0; }
+.wisp {
+  fill: none;
+  stroke: var(--wind);
+  stroke-linecap: round;
+}
+.wisp.flowing {
+  stroke-dasharray: 6 10;
+  animation: stream 0.45s linear infinite;
+}
+.wind-heart { fill: var(--blush); stroke: var(--ink); stroke-width: 1.2; }
+
+.bg-star { fill: var(--ink); opacity: 0; }
+
+.fx { visibility: hidden; }
+.fx.fx-on { visibility: visible; }
+
+.mark-loop {
+  fill: none;
+  stroke: var(--marker);
+  stroke-width: 3.3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: var(--len);
+  stroke-dashoffset: var(--len);
+}
+.fx.fx-on .mark-loop { animation: draw 0.7s ease forwards; }
+.mark-heart { fill: var(--marker); opacity: 0; }
+.fx.fx-on .mark-heart { animation: fade-in 0.35s ease 0.45s forwards; }
+
+.const-line {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  opacity: 0.8;
+  stroke-dasharray: var(--len);
+  stroke-dashoffset: var(--len);
+}
+.fx.fx-on .const-line { animation: draw 0.9s ease forwards; }
+
+.star {
+  fill: #ffc53d;
+  stroke: var(--ink);
+  stroke-width: 1.6;
+  stroke-linejoin: round;
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.fx.fx-on .star { animation: star-pop 0.45s cubic-bezier(0.18, 1.4, 0.4, 1) forwards; }
+
+@keyframes pop-in {
+  0% { opacity: 0; transform: scale(0.55) rotate(-6deg); }
+  68% { opacity: 1; transform: scale(1.07) rotate(1.4deg); }
+  100% { opacity: 1; transform: scale(1) rotate(0deg); }
+}
+
+@keyframes pop-out {
+  from { opacity: 1; transform: scale(1) rotate(0deg); }
+  to { opacity: 0; transform: scale(0.72) rotate(4deg) translateY(-8px); }
+}
+
+@keyframes hat-pop {
+  0% { opacity: 0; transform: translateY(6px) scale(0.3); transform-origin: center bottom; }
+  100% { opacity: 1; transform: translateY(0) scale(1); transform-origin: center bottom; }
+}
+
+@keyframes stream { to { stroke-dashoffset: -32; } }
+@keyframes draw { to { stroke-dashoffset: 0; } }
+@keyframes fade-in { to { opacity: 1; } }
+
+@keyframes star-pop {
+  0% { opacity: 0; transform: scale(0.2) rotate(-18deg); }
+  100% { opacity: 1; transform: scale(1) rotate(0deg); }
+}
+
+@media (max-height: 760px) {
+  .blurb { font-size: 1.02rem; }
+  h1 { font-size: clamp(1.45rem, 4vw, 2.2rem); }
+  .story .btn { font-size: 1.08rem; }
+}
+
+@media (max-width: 900px) {
+  .story { width: min(210px, 34vw); }
+  .date-line { font-size: 1.12rem; }
+  .blurb { font-size: 1rem; }
+  .story .btn { font-size: 1.05rem; white-space: normal; }
+}
+
+@media (max-width: 720px) {
+  .story { width: min(220px, 42vw); }
+  .story-card { padding: 0.6rem 0 0.7rem; }
+  .story-scroll,
+  .actions {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .date-line { font-size: 1.05rem; }
+  .blurb { font-size: 0.95rem; }
+  .figcaption { font-size: 0.88rem; }
+}
+
+/* iPhone 16 is 393px wide and 852px tall. Portrait gets a bottom card
+   under the orbit. Landscape keeps a side card that can scroll down. */
+@media (max-width: 500px) {
+  .stage:not(.is-intro) .sky {
+    top: env(safe-area-inset-top, 0px);
+    right: 0;
+    left: 0;
+    bottom: auto;
+    height: 40dvh;
+  }
+
+  .story,
+  .story.side-left,
+  .story.side-right,
+  .story.pin-top,
+  .story.pin-bottom {
+    left: max(10px, env(safe-area-inset-left, 0px));
+    right: max(10px, env(safe-area-inset-right, 0px));
+    top: auto;
+    bottom: 0;
+    width: auto;
+    transform: none;
+  }
+
+  .story-card {
+    max-height: calc(100dvh - 40dvh - env(safe-area-inset-bottom, 0px));
+    padding: 0.75rem 0 calc(0.7rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  .story-scroll {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-x: clip;
+    overflow-y: auto;
+    scrollbar-width: none;
+  }
+
+  .story-scroll::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+
+  .actions { flex-shrink: 0; }
+
+  .remember-row {
+    flex-direction: column;
+    align-items: stretch;
+    width: min(92vw, 22rem);
+    gap: 0.7rem;
+  }
+
+  .password,
+  .remember-row .btn,
+  .story .btn {
+    width: 100%;
+    min-height: 44px;
+    white-space: normal;
+  }
+
+  .password {
+    font-size: 16px;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  .date-line { font-size: 1.22rem; }
+  .blurb { font-size: 1.02rem; }
+  .figcaption { font-size: 0.95rem; }
+
+  .polaroid-card,
+  .polaroid-card.has-more {
+    width: min(250px, 100%);
+  }
+
+  .photo-arrow,
+  .photo-dot {
+    touch-action: manipulation;
+  }
+
+  .photo-arrow {
+    width: 44px;
+    height: 44px;
+    font-size: 1.5rem;
+  }
+
+  .photo-dot {
+    position: relative;
+    width: 44px;
+    height: 44px;
+    border-color: transparent;
+    background: transparent;
+  }
+
+  .photo-dot::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 11px;
+    height: 11px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 2px solid var(--ink);
+    background: #fffdf8;
+  }
+
+  .photo-dot.is-on {
+    background: transparent;
+  }
+
+  .photo-dot.is-on::before { background: var(--ink); }
+
+  h1 { font-size: clamp(1.55rem, 7.2vw, 2rem); }
+}
+
+@media (max-height: 500px) and (min-width: 501px) {
+  .story.side-right { right: max(14px, env(safe-area-inset-right, 0px)); }
+  .story.side-left { left: max(14px, env(safe-area-inset-left, 0px)); }
+  .story.pin-top { top: max(12px, env(safe-area-inset-top, 0px)); }
+  .story.pin-bottom { bottom: max(12px, env(safe-area-inset-bottom, 0px)); }
+
+  .story-card {
+    max-height: calc(100dvh - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px) - 8px);
+  }
+
+  .story-scroll {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-x: clip;
+    overflow-y: auto;
+    scrollbar-width: none;
+  }
+
+  .story-scroll::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+
+  .polaroid-card,
+  .polaroid-card.has-more { width: min(150px, 100%); }
+
+  .date-line { font-size: 1rem; }
+  .blurb { font-size: 0.88rem; }
+  .password { font-size: 16px; }
+  .story .btn,
+  .remember-row .btn {
+    font-size: 1rem;
+    min-height: 44px;
+    white-space: normal;
+  }
+  .photo-arrow {
+    width: 44px;
+    height: 44px;
+    font-size: 1.35rem;
+  }
+}
+
+/* A stop with no photo keeps a caption, if it has one, and drops the print. */
+.polaroid-card.no-photo {
+  width: auto;
+  margin: 0.15rem auto 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+}
+
+.polaroid-card.no-photo .tape,
+.polaroid-card.no-photo .frame,
+.polaroid-card.no-photo .photo-nav {
+  display: none;
+}
+
+#polaroid[hidden] { display: none !important; }
+
+.polaroid-card.is-landscape,
+.polaroid-card.has-more.is-landscape { width: min(228px, 100%); }
+
+.polaroid-card.is-portrait,
+.polaroid-card.has-more.is-portrait { width: min(168px, 76%); }
+
+@media (max-width: 500px) {
+  .polaroid-card.is-landscape,
+  .polaroid-card.has-more.is-landscape { width: min(250px, 100%); }
+  .polaroid-card.is-portrait,
+  .polaroid-card.has-more.is-portrait { width: min(188px, 58%); }
+}
+
+@media (max-height: 500px) and (min-width: 501px) {
+  .polaroid-card.is-landscape,
+  .polaroid-card.has-more.is-landscape { width: min(150px, 100%); }
+  .polaroid-card.is-portrait,
+  .polaroid-card.has-more.is-portrait { width: min(108px, 72%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
