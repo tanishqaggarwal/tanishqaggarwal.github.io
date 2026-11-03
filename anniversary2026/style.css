@@ -206,7 +206,7 @@ h1 {
   position: absolute;
   z-index: 2;
   top: 50%;
-  width: min(288px, 32vw);
+  width: min(560px, 46vw);
   transform: translateY(-50%);
   /* This element is only a positioner. A scrollbar here is what
      Safari keeps painting under the picture. */
@@ -252,8 +252,18 @@ h1 {
 
 .story-scroll {
   box-sizing: border-box;
+  flex: 1 1 auto;
+  min-height: 0;
   padding: 0 1.4rem;
-  overflow: visible;
+  overflow-x: clip;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.story-scroll::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
 }
 
 .actions {
@@ -288,7 +298,7 @@ h1 {
   box-sizing: border-box;
   width: 100%;
   max-width: 100%;
-  padding: 0.2rem 0.7rem 0.85rem 0.45rem;
+  padding: 0.8rem 1.55rem 1.45rem 1rem;
   overflow: clip;
 }
 
@@ -315,7 +325,7 @@ h1 {
 
 .polaroid-card {
   position: relative;
-  width: min(210px, 100%);
+  width: min(520px, 100%);
   max-width: 100%;
   min-width: 0;
   margin: 0.45rem auto 0;
@@ -327,7 +337,7 @@ h1 {
 }
 
 .polaroid-card.has-more {
-  width: min(210px, 100%);
+  width: min(520px, 100%);
   box-shadow:
     3px 4px 0 rgba(42, 36, 30, 0.16),
     7px 8px 0 #fffdf8,
@@ -635,14 +645,14 @@ figcaption:empty { display: none; }
 }
 
 @media (max-width: 900px) {
-  .story { width: min(210px, 34vw); }
+  .story { width: min(480px, 56vw); }
   .date-line { font-size: 1.12rem; }
   .blurb { font-size: 1rem; }
   .story .btn { font-size: 1.05rem; white-space: normal; }
 }
 
 @media (max-width: 720px) {
-  .story { width: min(220px, 42vw); }
+  .story { width: min(420px, 62vw); }
   .story-card { padding: 0.6rem 0 0.7rem; }
   .story-scroll,
   .actions {
@@ -726,7 +736,7 @@ figcaption:empty { display: none; }
 
   .polaroid-card,
   .polaroid-card.has-more {
-    width: min(250px, 100%);
+    width: 100%;
   }
 
   .photo-arrow,
@@ -795,7 +805,7 @@ figcaption:empty { display: none; }
   }
 
   .polaroid-card,
-  .polaroid-card.has-more { width: min(150px, 100%); }
+  .polaroid-card.has-more { width: min(420px, 100%); }
 
   .date-line { font-size: 1rem; }
   .blurb { font-size: 0.88rem; }
@@ -832,23 +842,23 @@ figcaption:empty { display: none; }
 #polaroid[hidden] { display: none !important; }
 
 .polaroid-card.is-landscape,
-.polaroid-card.has-more.is-landscape { width: min(228px, 100%); }
+.polaroid-card.has-more.is-landscape { width: min(520px, 100%); }
 
 .polaroid-card.is-portrait,
-.polaroid-card.has-more.is-portrait { width: min(168px, 76%); }
+.polaroid-card.has-more.is-portrait { width: min(380px, 88%); }
 
 @media (max-width: 500px) {
   .polaroid-card.is-landscape,
-  .polaroid-card.has-more.is-landscape { width: min(250px, 100%); }
+  .polaroid-card.has-more.is-landscape,
   .polaroid-card.is-portrait,
-  .polaroid-card.has-more.is-portrait { width: min(188px, 58%); }
+  .polaroid-card.has-more.is-portrait { width: 100%; }
 }
 
 @media (max-height: 500px) and (min-width: 501px) {
   .polaroid-card.is-landscape,
-  .polaroid-card.has-more.is-landscape { width: min(150px, 100%); }
+  .polaroid-card.has-more.is-landscape { width: min(440px, 100%); }
   .polaroid-card.is-portrait,
-  .polaroid-card.has-more.is-portrait { width: min(108px, 72%); }
+  .polaroid-card.has-more.is-portrait { width: min(300px, 88%); }
 }
 
 @media (prefers-reduced-motion: reduce) {
